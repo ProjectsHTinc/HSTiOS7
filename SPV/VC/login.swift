@@ -21,12 +21,14 @@ class login: UIViewController,UITextFieldDelegate,LoginView {
 
         // Do any additional setup after loading the view.
          self.hideKeyboardWhenTappedAround()
-     backView.alpha = CGFloat(0.1)
-       
+         backView.bindToKeyboard()
+         activityView.isHidden = true
+        phoneNum.attributedPlaceholder = NSAttributedString(string: "Enter Your Mobile Number", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        
     }
     
     override func viewDidLayoutSubviews(){
-           backView.addGradient(colors: [UIColor(red: 4.0 / 255.0, green: 105.0 / 255.0, blue: 215.0 / 255.0, alpha: 1.0), UIColor(red: 2.0 / 255.0, green: 53.0 / 255.0, blue: 108.0 / 255.0, alpha: 1.0)], locations: [0.1, 1.0])
+        backView.addGradient(colors: [UIColor(red: 4.0 / 255.0, green: 105.0 / 255.0, blue: 215.0 / 255.0, alpha: 0.93), UIColor(red: 2.0 / 255.0, green: 53.0 / 255.0, blue: 108.0 / 255.0, alpha: 0.97)], locations: [0.1, 1.0])
 
        }
     func startLoading() {
@@ -55,6 +57,7 @@ class login: UIViewController,UITextFieldDelegate,LoginView {
         guard CheckValuesAreEmpty () else {
                    return
                }
+        
                
                self.requestToOtp()
     }

@@ -18,6 +18,9 @@
 		6B8E492225336F300005B001 /* otpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8E492125336F300005B001 /* otpModel.swift */; };
 		6B8E492425336F4B0005B001 /* otpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8E492325336F4B0005B001 /* otpService.swift */; };
 		6B8E492625336F670005B001 /* otpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8E492525336F670005B001 /* otpPresenter.swift */; };
+		6BB57E372534929100B55855 /* BindViewToKeypad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB57E362534929100B55855 /* BindViewToKeypad.swift */; };
+		6BB57E3A2534ABC500B55855 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BB57E382534ABC300B55855 /* Lato-Regular.ttf */; };
+		6BB57E3B2534ABC500B55855 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BB57E392534ABC500B55855 /* Lato-Black.ttf */; };
 		6BBBA60225342CA900470E96 /* GradientColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBBA60125342CA800470E96 /* GradientColours.swift */; };
 		6BBBA60425343CAA00470E96 /* BottomBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBBA60325343CA900470E96 /* BottomBorder.swift */; };
 		6BBBA60625344C2C00470E96 /* blog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBBA60525344C2B00470E96 /* blog.swift */; };
@@ -75,6 +78,9 @@
 		6B8E492125336F300005B001 /* otpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = otpModel.swift; path = SPV/Model/otpModel.swift; sourceTree = SOURCE_ROOT; };
 		6B8E492325336F4B0005B001 /* otpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = otpService.swift; path = SPV/Service/otpService.swift; sourceTree = SOURCE_ROOT; };
 		6B8E492525336F670005B001 /* otpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = otpPresenter.swift; path = SPV/Presenter/otpPresenter.swift; sourceTree = SOURCE_ROOT; };
+		6BB57E362534929100B55855 /* BindViewToKeypad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BindViewToKeypad.swift; path = "../../../../Dropbox/My Mac (HappySanzs-MacBook-Pro.local)/Documents/SPV/SPV/Extension/BindViewToKeypad.swift"; sourceTree = "<group>"; };
+		6BB57E382534ABC300B55855 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		6BB57E392534ABC500B55855 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
 		6BBBA60125342CA800470E96 /* GradientColours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GradientColours.swift; path = SPV/Helper/GradientColours.swift; sourceTree = SOURCE_ROOT; };
 		6BBBA60325343CA900470E96 /* BottomBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BottomBorder.swift; path = SPV/Helper/BottomBorder.swift; sourceTree = SOURCE_ROOT; };
 		6BBBA60525344C2B00470E96 /* blog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = blog.swift; path = SPV/VC/blog.swift; sourceTree = SOURCE_ROOT; };
@@ -267,6 +273,8 @@
 				6BEA9142252DEBDC00F029C0 /* Poppins-Bold.ttf */,
 				6BEA9143252DEBDC00F029C0 /* Poppins-Medium.ttf */,
 				6BEA9144252DEBDC00F029C0 /* Poppins-Regular.ttf */,
+				6BB57E392534ABC500B55855 /* Lato-Black.ttf */,
+				6BB57E382534ABC300B55855 /* Lato-Regular.ttf */,
 				6BEA9141252DEBDC00F029C0 /* Poppins-SemiBold.ttf */,
 			);
 			path = Font;
@@ -299,6 +307,7 @@
 				6BEA912A252DDD4300F029C0 /* DateFormatter.swift */,
 				6BEA912C252DDD5500F029C0 /* HTMLToString.swift */,
 				6BBBA607253460AE00470E96 /* userDefault.swift */,
+				6BB57E362534929100B55855 /* BindViewToKeypad.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -451,7 +460,9 @@
 			files = (
 				6BEA90EB252DCC6C00F029C0 /* LaunchScreen.storyboard in Resources */,
 				6BEA9154252DF3E200F029C0 /* Localizable.strings in Resources */,
+				6BB57E3A2534ABC500B55855 /* Lato-Regular.ttf in Resources */,
 				6BEA90E8252DCC6C00F029C0 /* Assets.xcassets in Resources */,
+				6BB57E3B2534ABC500B55855 /* Lato-Black.ttf in Resources */,
 				6BEA90E6252DCC4E00F029C0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -519,6 +530,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BB57E372534929100B55855 /* BindViewToKeypad.swift in Sources */,
 				6BBBA60425343CAA00470E96 /* BottomBorder.swift in Sources */,
 				6BEA911F252DDC4900F029C0 /* APIUrl.swift in Sources */,
 				6BEA9125252DDCD500F029C0 /* ShadowEffectForUIView.swift in Sources */,

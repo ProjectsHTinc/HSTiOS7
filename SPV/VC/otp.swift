@@ -16,6 +16,7 @@ class otp: UIViewController,UITextFieldDelegate,LoginView {
     let presenterLoginService = LoginPresenter(loginService: LoginService())
     let presenterOtpService = OTPPresenter(oTPService: OTPService())
     
+    @IBOutlet var backView: UIView!
     @IBOutlet var textfield1: UITextField!
     @IBOutlet var textfield2: UITextField!
     @IBOutlet var textfield3: UITextField!
@@ -27,18 +28,18 @@ class otp: UIViewController,UITextFieldDelegate,LoginView {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        activityView.isHidden = true
         self.hideKeyboardWhenTappedAround()
+        self.backView.bindToKeyboard()
         self.setTextfieldDelegates()
         self.textfield1.addBottomBorder()
         self.textfield2.addBottomBorder()
         self.textfield3.addBottomBorder()
         self.textfield4.addBottomBorder()
         
-        
     }
     override func viewDidLayoutSubviews(){
               verifyButton.addGradient(colors: [UIColor(red: 4.0 / 255.0, green: 105.0 / 255.0, blue: 215.0 / 255.0, alpha: 1.0), UIColor(red: 2.0 / 255.0, green: 53.0 / 255.0, blue: 108.0 / 255.0, alpha: 1.0)], locations: [0.1, 1.0])
-
           }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -93,17 +94,17 @@ class otp: UIViewController,UITextFieldDelegate,LoginView {
            activityView.startAnimating()
        }
        
-       func finishLoading()
+    func finishLoading()
        {
-            activityView.isHidden = true
-            activityView.stopAnimating()
+           activityView.isHidden = true
+           activityView.stopAnimating()
        }
        
-        func setLoginOtp(login_otp: String) {
+    func setLoginOtp(login_otp: String) {
              self.otp = login_otp
         }
         
-        func setEmptyLogin(errorMessage: String) {
+    func setEmptyLogin(errorMessage: String) {
              AlertController.shared.showAlert(targetVc: self, title: Globals.alertTitle, message: errorMessage, complition: {
              })
         }
@@ -164,7 +165,7 @@ class otp: UIViewController,UITextFieldDelegate,LoginView {
        // Get the new view controller using segue.destination.
        // Pass the selected object to the new view controller.
        if (segue.identifier == ""){
-          let nav = segue.destination as! blog
+//        _ = segue.destination as!
        }
        }
     
