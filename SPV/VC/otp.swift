@@ -16,14 +16,20 @@ class otp: UIViewController,UITextFieldDelegate,LoginView {
     let presenterLoginService = LoginPresenter(loginService: LoginService())
     let presenterOtpService = OTPPresenter(oTPService: OTPService())
     
+    @IBOutlet var pleaseEnterOtp: UILabel!
+    @IBOutlet var enterOtpLbl: UILabel!
+    @IBOutlet var OTPlbl: UILabel!
+    @IBOutlet var receiveOtplbl: UILabel!
+    @IBOutlet var timeLapselbl: UILabel!
     @IBOutlet var backView: UIView!
     @IBOutlet var textfield1: UITextField!
     @IBOutlet var textfield2: UITextField!
     @IBOutlet var textfield3: UITextField!
     @IBOutlet var textfield4: UITextField!
     @IBOutlet var verifyButton: UIButton!
+    @IBOutlet var resendButton: UIButton!
     @IBOutlet var activityView: UIActivityIndicatorView!
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,10 +42,12 @@ class otp: UIViewController,UITextFieldDelegate,LoginView {
         self.textfield2.addBottomBorder()
         self.textfield3.addBottomBorder()
         self.textfield4.addBottomBorder()
+        self.addCustomizedBackBtn(title:"Mobile Verification")
         
     }
     override func viewDidLayoutSubviews(){
               verifyButton.addGradient(colors: [UIColor(red: 4.0 / 255.0, green: 105.0 / 255.0, blue: 215.0 / 255.0, alpha: 1.0), UIColor(red: 2.0 / 255.0, green: 53.0 / 255.0, blue: 108.0 / 255.0, alpha: 1.0)], locations: [0.1, 1.0])
+            
           }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -168,6 +176,10 @@ class otp: UIViewController,UITextFieldDelegate,LoginView {
 //        _ = segue.destination as!
        }
        }
+    @objc public override func backButtonClick()
+    {
+        self.dismiss(animated: true, completion: nil)
+    }
     
 }
 
