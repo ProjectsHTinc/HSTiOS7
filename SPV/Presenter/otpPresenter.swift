@@ -55,7 +55,7 @@ class OTPPresenter {
                         return OtpData(full_name: "\($0.full_name ?? "")", user_id: "\($0.user_id ?? "")", profile_pic: "\($0.profile_pic ?? "")", language_id: "\($0.language_id ?? "")", phone_number:"\($0.profile_pic ?? "")")
                        }
                     self.otpView?.setOtp(otpValue: mappedUsers)
-//                    UserDefaults.standard.setOtpArray(mappedUsers, forKey: UserDefaultsKey.userOtpListSessionkey.rawValue)
+                    UserDefaults.standard.setOtpArray(mappedUsers, forKey: UserDefaultsKey.userOtpListSessionkey.rawValue)
                   }
               },
               onFailure: { (errorMessage) in
