@@ -18,8 +18,6 @@
 		6B8E492225336F300005B001 /* otpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8E492125336F300005B001 /* otpModel.swift */; };
 		6B8E492425336F4B0005B001 /* otpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8E492325336F4B0005B001 /* otpService.swift */; };
 		6B8E492625336F670005B001 /* otpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8E492525336F670005B001 /* otpPresenter.swift */; };
-		6BA0E7AC2535A0E60081B894 /* customiseNavigationtitleWithBackButtton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0E7AB2535A0E60081B894 /* customiseNavigationtitleWithBackButtton.swift */; };
-		6BB57E372534929100B55855 /* BindViewToKeypad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB57E362534929100B55855 /* BindViewToKeypad.swift */; };
 		6BB57E3A2534ABC500B55855 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BB57E382534ABC300B55855 /* Lato-Regular.ttf */; };
 		6BB57E3B2534ABC500B55855 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BB57E392534ABC500B55855 /* Lato-Black.ttf */; };
 		6BBBA60225342CA900470E96 /* GradientColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBBA60125342CA800470E96 /* GradientColours.swift */; };
@@ -46,7 +44,6 @@
 		6BEA912F252DDE9C00F029C0 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEA912E252DDE9C00F029C0 /* AlertController.swift */; };
 		6BEA9131252DDFD600F029C0 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEA9130252DDFD600F029C0 /* ActivityIndicator.swift */; };
 		6BEA9133252DE00200F029C0 /* LocalizationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEA9132252DE00200F029C0 /* LocalizationSystem.swift */; };
-		6BEA9154252DF3E200F029C0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BEA9151252DF3E100F029C0 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,8 +76,6 @@
 		6B8E492125336F300005B001 /* otpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = otpModel.swift; path = SPV/Model/otpModel.swift; sourceTree = SOURCE_ROOT; };
 		6B8E492325336F4B0005B001 /* otpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = otpService.swift; path = SPV/Service/otpService.swift; sourceTree = SOURCE_ROOT; };
 		6B8E492525336F670005B001 /* otpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = otpPresenter.swift; path = SPV/Presenter/otpPresenter.swift; sourceTree = SOURCE_ROOT; };
-		6BA0E7AB2535A0E60081B894 /* customiseNavigationtitleWithBackButtton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = customiseNavigationtitleWithBackButtton.swift; path = "../../../../Dropbox/My Mac (HappySanzs-MacBook-Pro.local)/Documents/SPV/SPV/Extension/customiseNavigationtitleWithBackButtton.swift"; sourceTree = "<group>"; };
-		6BB57E362534929100B55855 /* BindViewToKeypad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BindViewToKeypad.swift; path = "../../../../Dropbox/My Mac (HappySanzs-MacBook-Pro.local)/Documents/SPV/SPV/Extension/BindViewToKeypad.swift"; sourceTree = "<group>"; };
 		6BB57E382534ABC300B55855 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		6BB57E392534ABC500B55855 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
 		6BBBA60125342CA800470E96 /* GradientColours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GradientColours.swift; path = SPV/Helper/GradientColours.swift; sourceTree = SOURCE_ROOT; };
@@ -117,8 +112,6 @@
 		6BEA9142252DEBDC00F029C0 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		6BEA9143252DEBDC00F029C0 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		6BEA9144252DEBDC00F029C0 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
-		6BEA9152252DF3E100F029C0 /* ta */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ta; path = "../../../../Dropbox/My Mac (HappySanzs-MacBook-Pro.local)/Documents/HSTiOS6/OPS/MultiLanguage/ta.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		6BEA9153252DF3E100F029C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "../../../../Dropbox/My Mac (HappySanzs-MacBook-Pro.local)/Documents/HSTiOS6/OPS/MultiLanguage/en.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D742C3861FD0A1235A866BAD /* Pods-SPV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SPV.debug.xcconfig"; path = "Target Support Files/Pods-SPV/Pods-SPV.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -194,14 +187,13 @@
 				6BEA9118252DDB2B00F029C0 /* Cell */,
 				6BEA911A252DDB4400F029C0 /* Helper */,
 				6BEA9119252DDB3C00F029C0 /* Extension */,
-				6BEA911B252DDB5500F029C0 /* StoryBoards */,
+				6BED08D8253DA993001E8C0F /* StoryBoards */,
 				6BEA90E9252DCC6C00F029C0 /* LaunchScreen.storyboard */,
 				6BEA90E4252DCC4E00F029C0 /* Main.storyboard */,
 				6BEA90EC252DCC6C00F029C0 /* Info.plist */,
 				6BEA90E7252DCC6C00F029C0 /* Assets.xcassets */,
 			);
-			name = SPV;
-			path = ../../../../Documents/SPV/SPV;
+			path = SPV;
 			sourceTree = "<group>";
 		};
 		6BEA90F4252DCC6D00F029C0 /* SPVTests */ = {
@@ -210,8 +202,7 @@
 				6BEA90F5252DCC6D00F029C0 /* SPVTests.swift */,
 				6BEA90F7252DCC6D00F029C0 /* Info.plist */,
 			);
-			name = SPVTests;
-			path = ../../../../Documents/SPV/SPVTests;
+			path = SPVTests;
 			sourceTree = "<group>";
 		};
 		6BEA90FF252DCC6D00F029C0 /* SPVUITests */ = {
@@ -220,8 +211,7 @@
 				6BEA9100252DCC6D00F029C0 /* SPVUITests.swift */,
 				6BEA9102252DCC6D00F029C0 /* Info.plist */,
 			);
-			name = SPVUITests;
-			path = ../../../../Documents/SPV/SPVUITests;
+			path = SPVUITests;
 			sourceTree = "<group>";
 		};
 		6BEA910E252DD2F900F029C0 /* Model */ = {
@@ -264,7 +254,6 @@
 		6BEA9112252DD50E00F029C0 /* Multi Language */ = {
 			isa = PBXGroup;
 			children = (
-				6BEA9151252DF3E100F029C0 /* Localizable.strings */,
 			);
 			path = "Multi Language";
 			sourceTree = "<group>";
@@ -296,7 +285,8 @@
 			isa = PBXGroup;
 			children = (
 			);
-			path = Cell;
+			name = Cell;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		6BEA9119252DDB3C00F029C0 /* Extension */ = {
@@ -309,8 +299,6 @@
 				6BEA912A252DDD4300F029C0 /* DateFormatter.swift */,
 				6BEA912C252DDD5500F029C0 /* HTMLToString.swift */,
 				6BBBA607253460AE00470E96 /* userDefault.swift */,
-				6BB57E362534929100B55855 /* BindViewToKeypad.swift */,
-				6BA0E7AB2535A0E60081B894 /* customiseNavigationtitleWithBackButtton.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -330,18 +318,19 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
-		6BEA911B252DDB5500F029C0 /* StoryBoards */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = StoryBoards;
-			sourceTree = "<group>";
-		};
 		6BEA9147252DF0AD00F029C0 /* HMSegmentControl */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = HMSegmentControl;
+			sourceTree = "<group>";
+		};
+		6BED08D8253DA993001E8C0F /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = StoryBoards;
+			path = StoryBoards/StoryBoards;
 			sourceTree = "<group>";
 		};
 		FF31AD88EF569BBE65EFC7F4 /* Pods */ = {
@@ -462,7 +451,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BEA90EB252DCC6C00F029C0 /* LaunchScreen.storyboard in Resources */,
-				6BEA9154252DF3E200F029C0 /* Localizable.strings in Resources */,
 				6BB57E3A2534ABC500B55855 /* Lato-Regular.ttf in Resources */,
 				6BEA90E8252DCC6C00F029C0 /* Assets.xcassets in Resources */,
 				6BB57E3B2534ABC500B55855 /* Lato-Black.ttf in Resources */,
@@ -533,7 +521,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BB57E372534929100B55855 /* BindViewToKeypad.swift in Sources */,
 				6BBBA60425343CAA00470E96 /* BottomBorder.swift in Sources */,
 				6BEA911F252DDC4900F029C0 /* APIUrl.swift in Sources */,
 				6BEA9125252DDCD500F029C0 /* ShadowEffectForUIView.swift in Sources */,
@@ -551,7 +538,6 @@
 				6BBBA60625344C2C00470E96 /* blog.swift in Sources */,
 				6BEA90E3252DCC4E00F029C0 /* ViewController.swift in Sources */,
 				6BEA912B252DDD4300F029C0 /* DateFormatter.swift in Sources */,
-				6BA0E7AC2535A0E60081B894 /* customiseNavigationtitleWithBackButtton.swift in Sources */,
 				6BEA9129252DDD1900F029C0 /* NavigationBarTitleOnLeftSide.swift in Sources */,
 				6BEA9121252DDC6C00F029C0 /* APIFunctionName.swift in Sources */,
 				6BEA90DF252DCC4E00F029C0 /* AppDelegate.swift in Sources */,
@@ -613,15 +599,6 @@
 				6BEA90EA252DCC6C00F029C0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		6BEA9151252DF3E100F029C0 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6BEA9152252DF3E100F029C0 /* ta */,
-				6BEA9153252DF3E100F029C0 /* en */,
-			);
-			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
