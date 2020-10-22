@@ -36,13 +36,13 @@ class otp: UIViewController,UITextFieldDelegate,LoginView {
         // Do any additional setup after loading the view.
         activityView.isHidden = true
         self.hideKeyboardWhenTappedAround()
-        view.bindToKeyboard()
+        //view.bindToKeyboard()
         self.setTextfieldDelegates()
         self.textfield1.addBottomBorder()
         self.textfield2.addBottomBorder()
         self.textfield3.addBottomBorder()
         self.textfield4.addBottomBorder()
-        self.addCustomizedBackBtn(title:"Mobile Verification")
+        //self.addCustomizedBackBtn(title:"Mobile Verification")
         
     }
     override func viewDidLayoutSubviews(){
@@ -175,8 +175,9 @@ class otp: UIViewController,UITextFieldDelegate,LoginView {
        if (segue.identifier == ""){
 //        _ = segue.destination as!
        }
-       }
-    @objc public override func backButtonClick()
+    }
+    
+    @objc public func backButtonClick()
     {
         self.dismiss(animated: true, completion: nil)
     }

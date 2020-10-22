@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-
 class LoginService {
       
       public func callAPILogin(mobile_no:String, onSuccess successCallback: ((_ login: LoginModel) -> Void)?,onFailure failureCallback: ((_ errorMessage: String) -> Void)?) {

@@ -5,7 +5,7 @@
    pod 'Alamofire', '~> 4.7.2'
    pod 'SwiftyJSON', '~> 4.0'
    pod 'SDWebImage', '~> 5.0'
-   pod 'IQKeyboardManagerSwift'
+   pod 'IQKeyboardManagerSwift', '6.3.0'
    pod 'HMSegmentedControl'
    pod "YoutubePlayer-in-WKWebView", "~> 0.2.0" 
    end

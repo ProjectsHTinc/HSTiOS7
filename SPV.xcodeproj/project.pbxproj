@@ -18,15 +18,14 @@
 		6B8E492225336F300005B001 /* otpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8E492125336F300005B001 /* otpModel.swift */; };
 		6B8E492425336F4B0005B001 /* otpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8E492325336F4B0005B001 /* otpService.swift */; };
 		6B8E492625336F670005B001 /* otpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8E492525336F670005B001 /* otpPresenter.swift */; };
-		6BB57E3A2534ABC500B55855 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BB57E382534ABC300B55855 /* Lato-Regular.ttf */; };
-		6BB57E3B2534ABC500B55855 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BB57E392534ABC500B55855 /* Lato-Black.ttf */; };
 		6BBBA60225342CA900470E96 /* GradientColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBBA60125342CA800470E96 /* GradientColours.swift */; };
 		6BBBA60425343CAA00470E96 /* BottomBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBBA60325343CA900470E96 /* BottomBorder.swift */; };
 		6BBBA60625344C2C00470E96 /* blog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBBA60525344C2B00470E96 /* blog.swift */; };
 		6BBBA608253460AE00470E96 /* userDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBBA607253460AE00470E96 /* userDefault.swift */; };
+		6BDCBD9225417E4A0082AA17 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BDCBD9125417E4A0082AA17 /* Lato-Bold.ttf */; };
+		6BDCBD9725417E530082AA17 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BDCBD9625417E530082AA17 /* Lato-Regular.ttf */; };
 		6BEA90DF252DCC4E00F029C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEA90DE252DCC4E00F029C0 /* AppDelegate.swift */; };
 		6BEA90E1252DCC4E00F029C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEA90E0252DCC4E00F029C0 /* SceneDelegate.swift */; };
-		6BEA90E3252DCC4E00F029C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEA90E2252DCC4E00F029C0 /* ViewController.swift */; };
 		6BEA90E6252DCC4E00F029C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BEA90E4252DCC4E00F029C0 /* Main.storyboard */; };
 		6BEA90E8252DCC6C00F029C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BEA90E7252DCC6C00F029C0 /* Assets.xcassets */; };
 		6BEA90EB252DCC6C00F029C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BEA90E9252DCC6C00F029C0 /* LaunchScreen.storyboard */; };
@@ -76,16 +75,15 @@
 		6B8E492125336F300005B001 /* otpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = otpModel.swift; path = SPV/Model/otpModel.swift; sourceTree = SOURCE_ROOT; };
 		6B8E492325336F4B0005B001 /* otpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = otpService.swift; path = SPV/Service/otpService.swift; sourceTree = SOURCE_ROOT; };
 		6B8E492525336F670005B001 /* otpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = otpPresenter.swift; path = SPV/Presenter/otpPresenter.swift; sourceTree = SOURCE_ROOT; };
-		6BB57E382534ABC300B55855 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
-		6BB57E392534ABC500B55855 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
 		6BBBA60125342CA800470E96 /* GradientColours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GradientColours.swift; path = SPV/Helper/GradientColours.swift; sourceTree = SOURCE_ROOT; };
 		6BBBA60325343CA900470E96 /* BottomBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BottomBorder.swift; path = SPV/Helper/BottomBorder.swift; sourceTree = SOURCE_ROOT; };
 		6BBBA60525344C2B00470E96 /* blog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = blog.swift; path = SPV/VC/blog.swift; sourceTree = SOURCE_ROOT; };
 		6BBBA607253460AE00470E96 /* userDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = userDefault.swift; path = SPV/Extension/userDefault.swift; sourceTree = SOURCE_ROOT; };
+		6BDCBD9125417E4A0082AA17 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		6BDCBD9625417E530082AA17 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		6BEA90DB252DCC4E00F029C0 /* SPV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BEA90DE252DCC4E00F029C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BEA90E0252DCC4E00F029C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6BEA90E2252DCC4E00F029C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6BEA90E5252DCC4E00F029C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6BEA90E7252DCC6C00F029C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BEA90EA252DCC6C00F029C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -108,10 +106,6 @@
 		6BEA912E252DDE9C00F029C0 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertController.swift; path = SPV/Helper/AlertController.swift; sourceTree = SOURCE_ROOT; };
 		6BEA9130252DDFD600F029C0 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ActivityIndicator.swift; path = SPV/Helper/ActivityIndicator.swift; sourceTree = SOURCE_ROOT; };
 		6BEA9132252DE00200F029C0 /* LocalizationSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocalizationSystem.swift; path = SPV/Helper/LocalizationSystem.swift; sourceTree = SOURCE_ROOT; };
-		6BEA9141252DEBDC00F029C0 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
-		6BEA9142252DEBDC00F029C0 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
-		6BEA9143252DEBDC00F029C0 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
-		6BEA9144252DEBDC00F029C0 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		D742C3861FD0A1235A866BAD /* Pods-SPV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SPV.debug.xcconfig"; path = "Target Support Files/Pods-SPV/Pods-SPV.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -176,7 +170,6 @@
 			children = (
 				6BEA90DE252DCC4E00F029C0 /* AppDelegate.swift */,
 				6BEA90E0252DCC4E00F029C0 /* SceneDelegate.swift */,
-				6BEA90E2252DCC4E00F029C0 /* ViewController.swift */,
 				6BEA9112252DD50E00F029C0 /* Multi Language */,
 				6BEA9113252DD52100F029C0 /* Font */,
 				6BEA9114252DD53200F029C0 /* API Manager */,
@@ -189,7 +182,6 @@
 				6BEA9119252DDB3C00F029C0 /* Extension */,
 				6BED08D8253DA993001E8C0F /* StoryBoards */,
 				6BEA90E9252DCC6C00F029C0 /* LaunchScreen.storyboard */,
-				6BEA90E4252DCC4E00F029C0 /* Main.storyboard */,
 				6BEA90EC252DCC6C00F029C0 /* Info.plist */,
 				6BEA90E7252DCC6C00F029C0 /* Assets.xcassets */,
 			);
@@ -261,12 +253,8 @@
 		6BEA9113252DD52100F029C0 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				6BEA9142252DEBDC00F029C0 /* Poppins-Bold.ttf */,
-				6BEA9143252DEBDC00F029C0 /* Poppins-Medium.ttf */,
-				6BEA9144252DEBDC00F029C0 /* Poppins-Regular.ttf */,
-				6BB57E392534ABC500B55855 /* Lato-Black.ttf */,
-				6BB57E382534ABC300B55855 /* Lato-Regular.ttf */,
-				6BEA9141252DEBDC00F029C0 /* Poppins-SemiBold.ttf */,
+				6BDCBD9125417E4A0082AA17 /* Lato-Bold.ttf */,
+				6BDCBD9625417E530082AA17 /* Lato-Regular.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -328,9 +316,9 @@
 		6BED08D8253DA993001E8C0F /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
+				6BEA90E4252DCC4E00F029C0 /* Main.storyboard */,
 			);
-			name = StoryBoards;
-			path = StoryBoards/StoryBoards;
+			path = StoryBoards;
 			sourceTree = "<group>";
 		};
 		FF31AD88EF569BBE65EFC7F4 /* Pods */ = {
@@ -451,10 +439,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BEA90EB252DCC6C00F029C0 /* LaunchScreen.storyboard in Resources */,
-				6BB57E3A2534ABC500B55855 /* Lato-Regular.ttf in Resources */,
 				6BEA90E8252DCC6C00F029C0 /* Assets.xcassets in Resources */,
-				6BB57E3B2534ABC500B55855 /* Lato-Black.ttf in Resources */,
+				6BDCBD9725417E530082AA17 /* Lato-Regular.ttf in Resources */,
 				6BEA90E6252DCC4E00F029C0 /* Main.storyboard in Resources */,
+				6BDCBD9225417E4A0082AA17 /* Lato-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,7 +524,6 @@
 				6BEA9133252DE00200F029C0 /* LocalizationSystem.swift in Sources */,
 				6B369D3E25321257001C1F29 /* login.swift in Sources */,
 				6BBBA60625344C2C00470E96 /* blog.swift in Sources */,
-				6BEA90E3252DCC4E00F029C0 /* ViewController.swift in Sources */,
 				6BEA912B252DDD4300F029C0 /* DateFormatter.swift in Sources */,
 				6BEA9129252DDD1900F029C0 /* NavigationBarTitleOnLeftSide.swift in Sources */,
 				6BEA9121252DDC6C00F029C0 /* APIFunctionName.swift in Sources */,
@@ -726,7 +713,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CGRHVR492N;
+				DEVELOPMENT_TEAM = 6V986NC4N5;
 				INFOPLIST_FILE = SPV/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -776,7 +763,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CGRHVR492N;
+				DEVELOPMENT_TEAM = 6V986NC4N5;
 				INFOPLIST_FILE = SPV/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (

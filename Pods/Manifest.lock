@@ -1,7 +1,7 @@
 PODS:
   - Alamofire (4.7.3)
   - HMSegmentedControl (1.5.6)
-  - IQKeyboardManagerSwift (6.5.6)
+  - IQKeyboardManagerSwift (6.3.0)
   - SDWebImage (5.8.0):
     - SDWebImage/Core (= 5.8.0)
   - SDWebImage/Core (5.8.0)
@@ -11,7 +11,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.7.2)
   - HMSegmentedControl
-  - IQKeyboardManagerSwift
+  - IQKeyboardManagerSwift (= 6.3.0)
   - SDWebImage (~> 5.0)
   - SwiftyJSON (~> 4.0)
   - YoutubePlayer-in-WKWebView (~> 0.2.0)
@@ -28,11 +28,11 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   HMSegmentedControl: 34c1f54d822d8308e7b24f5d901ec674dfa31352
-  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
   SDWebImage: 84000f962cbfa70c07f19d2234cbfcf5d779b5dc
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   YoutubePlayer-in-WKWebView: 4dad12b3ece938a6456fa4374df78942f88b485a
 
-PODFILE CHECKSUM: a5eca7eef8fcb3d0765d586ffaea62ae1b3f2085
+PODFILE CHECKSUM: 1937ffc36a638247bb45ad53ef46c296b3c60dea
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.9.1
