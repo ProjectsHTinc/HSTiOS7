@@ -27,10 +27,9 @@ class APIManager: NSObject {
     }
     
     enum Endpoint: String {
-        
-           case generateOTP = "apiuser/generate_otp/"
-           case otpURL      = "apiuser/login/"
-         }
+         case loginUrl = "apiuser/login/"
+         case otpUrl = "apiuser/generate_otp/"
+    }
          
     // Create Request
     func createRequest (_ url: String,method: HTTPMethod,headers: [String: String]?,parameters: [String:String]?,onSuccess successCallback: ((JSON) -> Void)?,onFailure failureCallback: ((String) -> Void)?)
@@ -54,7 +53,7 @@ class APIManager: NSObject {
     
     func callAPILogin(mobile_no:String,onSuccess successCallback: ((_ login: LoginModel) -> Void)?,onFailure failureCallback: ((_ errorMessage: String) -> Void)?) {
         // Build URL
-        let url = MAIN_URL + Endpoint.generateOTP.rawValue
+        let url = MAIN_URL + Endpoint.loginUrl.rawValue
         // Set Parameters
         let parameters: Parameters =  ["mobile_number": mobile_no]
         // call API
@@ -89,7 +88,7 @@ class APIManager: NSObject {
     // MARK: MAKE LOGIN REQUEST
     func callAPIOTP(mobile_no:String, otp:String, onSuccess successCallback: ((_ otp: [OTPModel]) -> Void)?,onFailure failureCallback: ((_ errorMessage: String) -> Void)?) {
            // Build URL
-           let url = MAIN_URL + Endpoint.otpURL.rawValue
+           let url = MAIN_URL + Endpoint.otpUrl.rawValue
            // Set Parameters
            let parameters: Parameters =  ["mobile_number": mobile_no, "otp": otp,  "device_token":"abcd" , "device_type": Globals.device_type]
            // call API

@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WHt-fn-m7T">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="rwT-U7-jza">
@@ -14,13 +20,61 @@
                     <view key="view" contentMode="scaleToFill" id="Zrv-g4-5xT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image 2" translatesAutoresizingMaskIntoConstraints="NO" id="t9Z-VY-5Ol">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJl-V6-lKq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SPV" translatesAutoresizingMaskIntoConstraints="NO" id="R9v-jS-XFr">
+                                        <rect key="frame" x="79.5" y="191.5" width="216" height="216"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="216" id="Sx6-hA-hJx"/>
+                                            <constraint firstAttribute="height" constant="216" id="z7b-uZ-a4U"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S. P. Velumani" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPu-xP-pLM">
+                                        <rect key="frame" x="20.5" y="434" width="334" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="334" id="6Iz-0U-a2w"/>
+                                            <constraint firstAttribute="height" constant="43" id="OBn-PJ-gQn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="32"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.015686274509803921" green="0.41176470588235292" blue="0.84313725490196079" alpha="0.89552156690140849" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="WPu-xP-pLM" firstAttribute="top" secondItem="R9v-jS-XFr" secondAttribute="bottom" constant="26.5" id="56e-ZY-1kw"/>
+                                    <constraint firstItem="WPu-xP-pLM" firstAttribute="centerX" secondItem="RJl-V6-lKq" secondAttribute="centerX" id="7fN-qc-fq6"/>
+                                    <constraint firstItem="R9v-jS-XFr" firstAttribute="centerX" secondItem="RJl-V6-lKq" secondAttribute="centerX" id="hNa-19-yw4"/>
+                                    <constraint firstItem="R9v-jS-XFr" firstAttribute="centerY" secondItem="RJl-V6-lKq" secondAttribute="centerY" constant="-34" id="zRC-8j-wC1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="EiT-Vu-BBg"/>
+                        <color key="backgroundColor" red="0.015686274510000001" green="0.41176470590000003" blue="0.84313725490000002" alpha="0.89552156689999995" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="RJl-V6-lKq" firstAttribute="trailing" secondItem="EiT-Vu-BBg" secondAttribute="trailing" id="8v4-oU-yyc"/>
+                            <constraint firstItem="RJl-V6-lKq" firstAttribute="top" secondItem="EiT-Vu-BBg" secondAttribute="top" id="GQJ-Aj-Qgi"/>
+                            <constraint firstItem="RJl-V6-lKq" firstAttribute="bottom" secondItem="EiT-Vu-BBg" secondAttribute="bottom" id="RNF-Vx-o3F"/>
+                            <constraint firstItem="t9Z-VY-5Ol" firstAttribute="bottom" secondItem="EiT-Vu-BBg" secondAttribute="bottom" id="WOS-JS-1fm"/>
+                            <constraint firstItem="t9Z-VY-5Ol" firstAttribute="leading" secondItem="EiT-Vu-BBg" secondAttribute="leading" id="YbG-P4-r0O"/>
+                            <constraint firstItem="t9Z-VY-5Ol" firstAttribute="trailing" secondItem="EiT-Vu-BBg" secondAttribute="trailing" id="oZD-dY-SsV"/>
+                            <constraint firstItem="t9Z-VY-5Ol" firstAttribute="top" secondItem="EiT-Vu-BBg" secondAttribute="top" id="q6g-74-Phf"/>
+                            <constraint firstItem="RJl-V6-lKq" firstAttribute="leading" secondItem="EiT-Vu-BBg" secondAttribute="leading" id="uyh-Tx-rZj"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ko2-ka-vmN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-248" y="156"/>
+            <point key="canvasLocation" x="-248.80000000000001" y="155.17241379310346"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image 2" width="981" height="736"/>
+        <image name="SPV" width="250" height="250"/>
+    </resources>
 </document>

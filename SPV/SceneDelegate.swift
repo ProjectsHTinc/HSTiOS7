@@ -27,7 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         // Set initial view controller from Main storyboard as root view controller of UIWindow
-//      self.window?.rootViewController = UIStoryboard(name: "", bundle: nil).instantiateInitialViewController()
+        self.window?.rootViewController = UIStoryboard(name: "Dashboard", bundle: nil).instantiateInitialViewController()
         // Present window to screen
         self.window?.makeKeyAndVisible()
 

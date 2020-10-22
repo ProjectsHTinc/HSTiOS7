@@ -24,6 +24,8 @@
 		6BBBA608253460AE00470E96 /* userDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBBA607253460AE00470E96 /* userDefault.swift */; };
 		6BDCBD9225417E4A0082AA17 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BDCBD9125417E4A0082AA17 /* Lato-Bold.ttf */; };
 		6BDCBD9725417E530082AA17 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BDCBD9625417E530082AA17 /* Lato-Regular.ttf */; };
+		6BDCBDD725419E7A0082AA17 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BDCBDD625419E7A0082AA17 /* Dashboard.storyboard */; };
+		6BDCBDEA2541A8140082AA17 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDCBDE92541A8140082AA17 /* TabbarController.swift */; };
 		6BEA90DF252DCC4E00F029C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEA90DE252DCC4E00F029C0 /* AppDelegate.swift */; };
 		6BEA90E1252DCC4E00F029C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEA90E0252DCC4E00F029C0 /* SceneDelegate.swift */; };
 		6BEA90E6252DCC4E00F029C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BEA90E4252DCC4E00F029C0 /* Main.storyboard */; };
@@ -81,6 +83,8 @@
 		6BBBA607253460AE00470E96 /* userDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = userDefault.swift; path = SPV/Extension/userDefault.swift; sourceTree = SOURCE_ROOT; };
 		6BDCBD9125417E4A0082AA17 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		6BDCBD9625417E530082AA17 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		6BDCBDD625419E7A0082AA17 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		6BDCBDE92541A8140082AA17 /* TabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		6BEA90DB252DCC4E00F029C0 /* SPV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BEA90DE252DCC4E00F029C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BEA90E0252DCC4E00F029C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -239,6 +243,7 @@
 				6B369D3D25321256001C1F29 /* login.swift */,
 				6B369D412532214E001C1F29 /* otp.swift */,
 				6BBBA60525344C2B00470E96 /* blog.swift */,
+				6BDCBDE92541A8140082AA17 /* TabbarController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -317,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				6BEA90E4252DCC4E00F029C0 /* Main.storyboard */,
+				6BDCBDD625419E7A0082AA17 /* Dashboard.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -439,6 +445,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BEA90EB252DCC6C00F029C0 /* LaunchScreen.storyboard in Resources */,
+				6BDCBDD725419E7A0082AA17 /* Dashboard.storyboard in Resources */,
 				6BEA90E8252DCC6C00F029C0 /* Assets.xcassets in Resources */,
 				6BDCBD9725417E530082AA17 /* Lato-Regular.ttf in Resources */,
 				6BEA90E6252DCC4E00F029C0 /* Main.storyboard in Resources */,
@@ -533,6 +540,7 @@
 				6B369D4525323213001C1F29 /* constants.swift in Sources */,
 				6B8E492025335A3D0005B001 /* Reachability.swift in Sources */,
 				6B369D422532214E001C1F29 /* otp.swift in Sources */,
+				6BDCBDEA2541A8140082AA17 /* TabbarController.swift in Sources */,
 				6B8E492225336F300005B001 /* otpModel.swift in Sources */,
 				6BEA90E1252DCC4E00F029C0 /* SceneDelegate.swift in Sources */,
 				6B369D40253212F6001C1F29 /* loginModel.swift in Sources */,
@@ -715,7 +723,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6V986NC4N5;
 				INFOPLIST_FILE = SPV/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -765,7 +773,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6V986NC4N5;
 				INFOPLIST_FILE = SPV/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
