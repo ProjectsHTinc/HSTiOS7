@@ -20,7 +20,6 @@ class login: UIViewController,UITextFieldDelegate,LoginView {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-         print("check 123")
          self.hideKeyboardWhenTappedAround()
          //view.bindToKeyboard()
          activityView.isHidden = true
