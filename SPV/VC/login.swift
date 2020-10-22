@@ -18,7 +18,8 @@ class login: UIViewController,UITextFieldDelegate,LoginView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       print ("test12345678")
+       print ("test happysanz")
+        
         // Do any additional setup after loading the view.
          self.hideKeyboardWhenTappedAround()
          //view.bindToKeyboard()
