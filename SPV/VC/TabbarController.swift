@@ -10,8 +10,13 @@ import UIKit
 
 class TabbarController: UITabBarController, UITabBarControllerDelegate, UISearchControllerDelegate, UISearchBarDelegate {
     
-    var menuButton = UIButton(frame: CGRect.zero)
-    var searchController = UISearchController()
+    @IBOutlet weak var menuOutlet: UIBarButtonItem!
+    @IBOutlet weak var languageOutlet: UIBarButtonItem!
+    @IBOutlet weak var searchOutlet: UIBarButtonItem!
+    @IBOutlet weak var notificationOutlet: UIBarButtonItem!
+    
+    
+    var searchBar = UISearchController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,20 +31,47 @@ class TabbarController: UITabBarController, UITabBarControllerDelegate, UISearch
     }
     
 
-    // Menu Button Touch Action
-    @objc func menuButtonAction(sender: UIButton) {
-        self.selectedIndex = 2
-        // console print to verify the button works
-        print("Middle Button was just pressed!")
-       }
+    @IBAction func menu(_ sender: Any) {
+        
+    }
+    
+    @IBAction func language(_ sender: Any) {
+        
+    }
+    
+    @IBAction func search(_ sender: Any) {
+        createSearchBar()
+    }
+    
+    func createSearchBar()
+    {
+        searchBar = UISearchController(searchResultsController: nil)
+        // Set any properties (in this case, don't hide the nav bar and don't show the emoji keyboard option)
+        searchBar.hidesNavigationBarDuringPresentation = false
+        searchBar.searchBar.keyboardType = UIKeyboardType.asciiCapable
+        //searchBar.searchResultsUpdater = self
+        searchBar.hidesNavigationBarDuringPresentation = false
+        searchBar.obscuresBackgroundDuringPresentation = false
+        searchBar.definesPresentationContext = true
+        //SearchController Customization
+        searchBar.searchBar.searchTextField.backgroundColor = UIColor.white
+        searchBar.searchBar.searchTextField.leftView?.tintColor = .gray
+        searchBar.searchBar.barTintColor = UIColor(red: 3.0/255.0, green: 53.0/255.0, blue: 107.0/255.0, alpha: 1.0)
+        UISearchBar.appearance().tintColor = .white
+        // Make this class the delegate and present the search
+        self.searchBar.searchBar.delegate = self
+        self.navigationController?.present(searchBar, animated: true, completion: nil)
+    }
     
     func searchBarSearchButtonClicked( _ searchBar: UISearchBar)
     {
         self.performSegue(withIdentifier: "to_Search", sender: searchBar.text)
-        self.searchController.isActive = false
+        self.searchBar.isActive = false
     }
-
     
+    @IBAction func notification(_ sender: Any) {
+        
+    }
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

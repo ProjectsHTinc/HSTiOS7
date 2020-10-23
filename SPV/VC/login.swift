@@ -18,7 +18,7 @@ class login: UIViewController,UITextFieldDelegate,LoginView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       print ("test12345678")
+        print ("test12345678")
         // Do any additional setup after loading the view.
          self.hideKeyboardWhenTappedAround()
          //view.bindToKeyboard()
@@ -42,13 +42,12 @@ class login: UIViewController,UITextFieldDelegate,LoginView {
     }
     
     func setLoginOtp(login_otp: String) {
-        let mobile_otp = login_otp
-        self.performSegue(withIdentifier: "to_OTP", sender: mobile_otp)
+         let mobile_otp = login_otp
+         self.performSegue(withIdentifier: "to_OTP", sender: mobile_otp)
     }
     
     func setEmptyLogin(errorMessage: String) {
-    AlertController.shared.showAlert(targetVc: self, title: Globals.alertTitle, message: errorMessage, complition: {
-        
+        AlertController.shared.showAlert(targetVc: self, title: Globals.alertTitle, message: errorMessage, complition: {
         })
     }
     
@@ -58,7 +57,7 @@ class login: UIViewController,UITextFieldDelegate,LoginView {
                    return
                }
                
-               self.requestToOtp()
+        self.requestToOtp()
     }
     
     func requestToOtp()

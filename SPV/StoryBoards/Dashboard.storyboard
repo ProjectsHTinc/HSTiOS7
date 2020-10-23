@@ -64,16 +64,28 @@
                     <navigationItem key="navigationItem" id="yJC-py-TnU">
                         <barButtonItem key="leftBarButtonItem" image="Menu" id="Zxg-Eg-Txa">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="menu:" destination="hgQ-UP-Bmf" id="4ps-od-nEJ"/>
+                            </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem image="notification" id="xvE-7e-5GB">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="notification:" destination="hgQ-UP-Bmf" id="PoS-Mv-Lsm"/>
+                                </connections>
                             </barButtonItem>
                             <barButtonItem image="Search" id="qJo-hQ-GQf">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="search:" destination="hgQ-UP-Bmf" id="prq-YR-6Of"/>
+                                </connections>
                             </barButtonItem>
                             <barButtonItem image="language" id="DFK-v1-7BP">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="language:" destination="hgQ-UP-Bmf" id="Gyf-i6-PkP"/>
+                                </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -85,6 +97,10 @@
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <outlet property="languageOutlet" destination="DFK-v1-7BP" id="tlP-0o-U5U"/>
+                        <outlet property="menuOutlet" destination="Zxg-Eg-Txa" id="B0b-ks-Mix"/>
+                        <outlet property="notificationOutlet" destination="xvE-7e-5GB" id="ZxH-4W-fMh"/>
+                        <outlet property="searchOutlet" destination="qJo-hQ-GQf" id="o2t-p9-c4v"/>
                         <segue destination="3Cv-he-QlU" kind="relationship" relationship="viewControllers" id="zqp-60-Ydp"/>
                         <segue destination="YW6-p5-ZN0" kind="relationship" relationship="viewControllers" id="Jdr-CS-zZe"/>
                         <segue destination="AUX-I4-TIx" kind="relationship" relationship="viewControllers" id="Wt9-Pi-6NB"/>
