@@ -8,15 +8,16 @@
 
 import UIKit
 
-class TabbarController: UITabBarController, UITabBarControllerDelegate, UISearchControllerDelegate, UISearchBarDelegate {
-    
+class TabbarController: UITabBarController, UITabBarControllerDelegate, UISearchControllerDelegate, UISearchBarDelegate, NewsFeedView {
+
     @IBOutlet weak var menuOutlet: UIBarButtonItem!
     @IBOutlet weak var languageOutlet: UIBarButtonItem!
     @IBOutlet weak var searchOutlet: UIBarButtonItem!
     @IBOutlet weak var notificationOutlet: UIBarButtonItem!
     
-    
     var searchBar = UISearchController()
+    var NewsFeed = NewsFeedPresenter(newsFeedServices: NewsFeedServices())
+    var NewsFeedData = [newsFeedData]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,12 +25,42 @@ class TabbarController: UITabBarController, UITabBarControllerDelegate, UISearch
         // Do any additional setup after loading the view.
         /*Tabbar border width*/
         if let navigationbar = self.navigationController?.navigationBar {
-            navigationbar.setGradientBackground(colors: [UIColor(red: 5.0/255.0, green: 104.0/255.0, blue: 214.0/255.0, alpha: 1.0), UIColor(red: 3.0/255.0, green: 53.0/255.0, blue: 107.0/255.0, alpha: 1.0)], startPoint: .topLeft, endPoint: .bottomRight)
+            navigationbar.setGradientBackground(colors: [UIColor(red: 3.0/255.0, green: 53.0/255.0, blue: 107.0/255.0, alpha: 1.0),UIColor(red: 5.0/255.0, green: 104.0/255.0, blue: 214.0/255.0, alpha: 1.0)], startPoint: .topLeft, endPoint: .bottomRight)
         }
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Lato-Bold", size: 10)!], for: .normal)
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Lato-Bold", size: 10)!], for: .selected)
+        callWebservices()
     }
     
+    func callWebservices (){
+        NewsFeed.attachView(view: self)
+        NewsFeed.getNewsFeed(user_id:"1")
+    }
+    
+    func startLoading() {
+        //
+    }
+    
+    func finishLoading() {
+        //
+    }
+    
+    func setNewsFeed(newsfeedValue: [newsFeedData]) {
+        NewsFeedData = newsfeedValue
+        GlobalVariables.shared.localNewsId = NewsFeedData[0].id
+        GlobalVariables.shared.stateNewsId = NewsFeedData[1].id
+        GlobalVariables.shared.localEventsId = NewsFeedData[2].id
+        GlobalVariables.shared.stateEventsId = NewsFeedData[3].id
+        GlobalVariables.shared.socialInitiativesId = NewsFeedData[4].id
+        GlobalVariables.shared.nallarammTrustId = NewsFeedData[5].id
+        
+    }
+    
+    func setEmpty(errorMessage: String) {
+        AlertController.shared.showAlert(targetVc: self, title: Globals.alertTitle, message: errorMessage, complition: {
+        })
+    }
+
 
     @IBAction func menu(_ sender: Any) {
         

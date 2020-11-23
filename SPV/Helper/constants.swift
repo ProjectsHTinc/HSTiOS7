@@ -15,6 +15,6 @@ struct Globals {
        static let LoginAlertMessage = "mobile number is empty";
        static let ConstituencyAlertMessage = "Please the constituency";
        static let OTPAlertMessage = "Otp is incorrect";
-
+       static let homePageImage = "https://happysanz.in/spveluapp/assets/news_feed/";
 }
  

@@ -86,3 +86,4 @@ class ViewWithGradient: UIView {
         gradient.removeFromSuperlayer()
     }
 }
+

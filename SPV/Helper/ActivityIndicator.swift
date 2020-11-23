@@ -26,7 +26,7 @@ extension UIView {
     } else {
         // Fallback on earlier versions
     }
-    activityIndicator.color = UIColor(red: 11.0/255, green: 145.0/255, blue: 33.0/255, alpha: 1.0)
+    activityIndicator.color = UIColor(red: 3.0/255.0, green: 53.0/255.0, blue: 107.0/255.0, alpha: 1.0)
     activityIndicator.startAnimating()
     self.isUserInteractionEnabled = false
 

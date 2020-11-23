@@ -9,83 +9,42 @@
 import UIKit
 import Foundation
 
-@IBDesignable
-extension UIView {
-    // Shadow
-    @IBInspectable var shadow: Bool {
-        get {
-            return layer.shadowOpacity > 0.0
-        }
+@IBDesignable extension UIView {
+    @IBInspectable var shadowColor: UIColor?{
         set {
-            if newValue == true {
-                self.addShadow()
-            }
+            guard let uiColor = newValue else { return }
+            layer.shadowColor = uiColor.cgColor
+        }
+        get{
+            guard let color = layer.shadowColor else { return nil }
+            return UIColor(cgColor: color)
         }
     }
-    
-    fileprivate func addShadow(shadowColor: CGColor = UIColor.black.cgColor, shadowOffset: CGSize = CGSize(width: 3.0, height: 3.0), shadowOpacity: Float = 0.35, shadowRadius: CGFloat = 5.0) {
-        let layer = self.layer
-        layer.masksToBounds = false
-        
-        layer.shadowColor = shadowColor
-        layer.shadowOffset = shadowOffset
-        layer.shadowRadius = shadowRadius
-        layer.shadowOpacity = shadowOpacity
-        layer.shadowPath = UIBezierPath(roundedRect: layer.bounds, cornerRadius: layer.cornerRadius).cgPath
-        
-        let backgroundColor = self.backgroundColor?.cgColor
-        self.backgroundColor = nil
-        layer.backgroundColor =  backgroundColor
-    }
-    
-    
-    // Corner radius
-    @IBInspectable var circle: Bool {
-        get {
-            return layer.cornerRadius == self.bounds.width*0.5
-        }
+
+    @IBInspectable var shadowOpacity: Float{
         set {
-            if newValue == true {
-                self.cornerRadius = self.bounds.width*0.5
-            }
+            layer.shadowOpacity = newValue
+        }
+        get{
+            return layer.shadowOpacity
         }
     }
-    
-    @IBInspectable var cornerRadius: CGFloat {
-        get {
-            return self.layer.cornerRadius
-        }
-        
+
+    @IBInspectable var shadowOffset: CGSize{
         set {
-            self.layer.cornerRadius = newValue
+            layer.shadowOffset = newValue
+        }
+        get{
+            return layer.shadowOffset
         }
     }
-    
-    // Borders
-    // Border width
-    @IBInspectable
-    public var borderWidth: CGFloat {
+
+    @IBInspectable var shadowRadius: CGFloat{
         set {
-            layer.borderWidth = newValue
+            layer.shadowRadius = newValue
         }
-        
-        get {
-            return layer.borderWidth
-        }
-    }
-    
-    // Border color
-    @IBInspectable
-    public var borderColor: UIColor? {
-        set {
-            layer.borderColor = newValue?.cgColor
-        }
-        
-        get {
-            if let borderColor = layer.borderColor {
-                return UIColor(cgColor: borderColor)
-            }
-            return nil
+        get{
+            return layer.shadowRadius
         }
     }
 }

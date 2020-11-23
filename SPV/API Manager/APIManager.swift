@@ -17,7 +17,7 @@ class APIManager: NSObject {
     static let instance = APIManager()
     var manager: SessionManager {
         let manager = Alamofire.SessionManager.default
-      manager.session.configuration.timeoutIntervalForRequest = 3.0
+        manager.session.configuration.timeoutIntervalForRequest = 3.0
         return manager
     }
     
@@ -29,6 +29,14 @@ class APIManager: NSObject {
     enum Endpoint: String {
          case loginUrl = "apiuser/login/"
          case otpUrl = "apiuser/generate_otp/"
+         case newsfeedCategoeryUrl = "apiuser/newsfeeds_category/"
+         case newsfeedCategoeryId = "apiuser/newsfeeds_categoryid/"
+         case allHomeUrl = "apiuser/all_newsfeeds/"
+         case allNewsUrl = "apiuser/all_news//"
+         case allEventsUrl = "apiuser/all_events/"
+         case socilaMediaUrl = "apiuser/spv_socialmedia/"
+         case homePageUrl = "apiuser/newsfeed_details/"
+
     }
          
     // Create Request
@@ -84,7 +92,6 @@ class APIManager: NSObject {
       )
     }
     
-    
     // MARK: MAKE LOGIN REQUEST
     func callAPIOTP(mobile_no:String, otp:String, onSuccess successCallback: ((_ otp: [OTPModel]) -> Void)?,onFailure failureCallback: ((_ errorMessage: String) -> Void)?) {
            // Build URL
@@ -95,33 +102,241 @@ class APIManager: NSObject {
            self.createRequest(url, method: .post, headers: nil, parameters: parameters as? [String : String], onSuccess: {(responseObject: JSON) -> Void in
            // Create dictionary
            print(responseObject)
-             
-             guard let msg = responseObject["msg"].string, msg == "Login Successfully" else{
+           guard let msg = responseObject["msg"].string, msg == "Login Successfully" else{
                  failureCallback?(responseObject["msg"].string!)
                  return
            }
-               
-//             GlobalVariables.shared.userCount = responseObject["user_count"].int!
-               
-             if let responseDict = responseObject["userData"].arrayObject
-             {
-                   let otpModel = responseDict as! [[String:AnyObject]]
-                   // Create object
-                   var data = [OTPModel]()
-                   for item in otpModel {
-                       let single = OTPModel.build(item)
-                       data.append(single)
-                   }
+                              
+           if let responseDict = responseObject["userData"].arrayObject
+            {
+                let otpModel = responseDict as! [[String:AnyObject]]
+                // Create object
+                var data = [OTPModel]()
+                for item in otpModel {
+                    let single = OTPModel.build(item)
+                    data.append(single)
+                }
                    // Fire callback
-                 successCallback?(data)
-              } else {
+                successCallback?(data)
+              }else {
                    failureCallback?("An error has occured.")
                }
-               
            },
            onFailure: {(errorMessage: String) -> Void in
                failureCallback?(errorMessage)
            }
          )
+    }
+    
+    func homeAPI (from:String, search_text:String, categoery:String, nf_category_id:String, offset:String, rowcount:String, onSuccess successCallback: ((_ resp: [HomeModel]) -> Void)?,onFailure failureCallback: ((_ errorMessage: String) -> Void)?) {
+        // Build URL
+        var url = String()
+        var parameters: Parameters?
+        if search_text == "yes"
+        {
+            url = MAIN_URL + Endpoint.otpUrl.rawValue
+            // Set Parameters
+            parameters =  ["offset":offset, "rowcount":rowcount]
+        }
+        else
+        {
+            if from == "home"
+            {
+                url = MAIN_URL + Endpoint.allHomeUrl.rawValue
+                // Set Parameters
+                parameters =  ["offset":offset, "rowcount":rowcount]
+            }
+            else if from == "news"
+            {
+                if categoery == "all"
+                {
+                    url = MAIN_URL + Endpoint.allNewsUrl.rawValue
+                    // Set Parameters
+                    parameters =  ["offset":offset, "rowcount":rowcount]
+                }
+                else if categoery == "Local News"
+                {
+                    url = MAIN_URL + Endpoint.newsfeedCategoeryId.rawValue
+                    // Set Parameters
+                    parameters =  ["nf_category_id":nf_category_id, "offset":offset, "rowcount":rowcount]
+                }
+                else
+                {
+                    url = MAIN_URL + Endpoint.newsfeedCategoeryId.rawValue
+                    // Set Parameters
+                    parameters =  ["nf_category_id":nf_category_id, "offset":offset, "rowcount":rowcount]
+                }
+            }
+            else if from == "events"
+            {
+                if categoery == "all"
+                {
+                    url = MAIN_URL + Endpoint.allEventsUrl.rawValue
+                    // Set Parameters
+                    parameters =  ["offset":offset, "rowcount":rowcount]
+                }
+                else if categoery == "Local Events"
+                {
+                    url = MAIN_URL + Endpoint.newsfeedCategoeryId.rawValue
+                    // Set Parameters
+                    parameters =  ["nf_category_id":nf_category_id, "offset":offset, "rowcount":rowcount]
+                }
+                else
+                {
+                    url = MAIN_URL + Endpoint.newsfeedCategoeryId.rawValue
+                    // Set Parameters
+                    parameters =  ["nf_category_id":nf_category_id, "offset":offset, "rowcount":rowcount]
+                }
+            }
+            else if from == "Socialinitiatives"
+            {
+                    url = MAIN_URL + Endpoint.newsfeedCategoeryId.rawValue
+                    // Set Parameters
+                    parameters =  ["nf_category_id":nf_category_id, "offset":offset, "rowcount":rowcount]
+
+            }
+            else if from == "nallarammTrust"
+            {
+                url = MAIN_URL + Endpoint.newsfeedCategoeryId.rawValue
+                // Set Parameters
+                parameters =  ["nf_category_id":nf_category_id, "offset":offset, "rowcount":rowcount]
+
+            }
+        }
+        // call API
+        self.createRequest(url, method: .post, headers: nil, parameters: parameters as? [String : String], onSuccess: {(responseObject: JSON) -> Void in
+        // Create dictionary
+        print(responseObject)
+        guard let status = responseObject["status"].string, status == "Success" else{
+              failureCallback?(responseObject["status"].string!)
+              return
+        }
+            
+        if let responseDict = responseObject["nf_result"].arrayObject
+        {
+                let toModel = responseDict as! [[String:AnyObject]]
+                // Create object
+                var data = [HomeModel]()
+                for item in toModel {
+                    let single = HomeModel.build(item)
+                    data.append(single)
+                }
+                // Fire callback
+                successCallback?(data)
+        } else {
+            failureCallback?("An error has occured.")
+        }
+        },
+        onFailure: {(errorMessage: String) -> Void in
+            failureCallback?(errorMessage)
+        }
+      )
+    }
+    
+    func callNewsFeed(user_id:String,onSuccess successCallback: ((_ newsFeed: [NewsFeedModel]) -> Void)?,onFailure failureCallback: ((_ errorMessage: String) -> Void)?) {
+        // Build URL
+        let url = MAIN_URL + Endpoint.loginUrl.rawValue
+        // Set Parameters
+        let parameters: Parameters =  ["user_id": user_id]
+        // call API
+        self.createRequest(url, method: .post, headers: nil, parameters: parameters as? [String : String], onSuccess: {(responseObject: JSON) -> Void in
+        // Create dictionary
+        print(responseObject)
+          
+          guard let msg = responseObject["msg"].string, msg == "OTP Generated" else{
+              failureCallback?(responseObject["msg"].string!)
+              return
+        }
+          if let responseDict = responseObject["userData"].arrayObject
+             {
+                 let newsFeedModel = responseDict as! [[String:AnyObject]]
+                 // Create object
+                 var data = [NewsFeedModel]()
+                 for item in newsFeedModel {
+                     let single = NewsFeedModel.build(item)
+                     data.append(single)
+                 }
+                    // Fire callback
+                 successCallback?(data)
+               }else {
+                    failureCallback?("An error has occured.")
+                }
+            
+        },
+        onFailure: {(errorMessage: String) -> Void in
+            failureCallback?(errorMessage)
+        }
+      )
+    }
+    
+    func callSocilaMedia(user_id:String,onSuccess successCallback: ((_ socialMedia: [SocilaMediaModel]) -> Void)?,onFailure failureCallback: ((_ errorMessage: String) -> Void)?) {
+        // Build URL
+        let url = MAIN_URL + Endpoint.socilaMediaUrl.rawValue
+        // Set Parameters
+        let parameters: Parameters =  ["user_id": user_id]
+        // call API
+        self.createRequest(url, method: .post, headers: nil, parameters: parameters as? [String : String], onSuccess: {(responseObject: JSON) -> Void in
+        // Create dictionary
+        print(responseObject)
+          
+          guard let status = responseObject["status"].string, status == "Success" else{
+              failureCallback?(responseObject["msg"].string!)
+              return
+        }
+          if let responseDict = responseObject["socialmedia_result"].arrayObject
+             {
+                 let socilaMediaModel = responseDict as! [[String:AnyObject]]
+                 // Create object
+                 var data = [SocilaMediaModel]()
+                 for item in socilaMediaModel {
+                     let single = SocilaMediaModel.build(item)
+                     data.append(single)
+                 }
+                    // Fire callback
+                 successCallback?(data)
+               }else {
+                    failureCallback?("An error has occured.")
+                }
+            
+        },
+        onFailure: {(errorMessage: String) -> Void in
+            failureCallback?(errorMessage)
+        }
+      )
+    }
+    
+    func homePageDetail (user_id:String, newsfeed_id:String, onSuccess successCallback: ((_ resp: [HomePageDetailModel]) -> Void)?,onFailure failureCallback: ((_ errorMessage: String) -> Void)?) {
+        // Build URL
+        let url = MAIN_URL + Endpoint.homePageUrl.rawValue
+        // Set Parameters
+        let parameters: Parameters =  ["newsfeed_id":newsfeed_id]
+        // call API
+        self.createRequest(url, method: .post, headers: nil, parameters: parameters as? [String : String], onSuccess: {(responseObject: JSON) -> Void in
+        // Create dictionary
+        print(responseObject)
+        guard let status = responseObject["status"].string, status == "Success" else{
+              failureCallback?(responseObject["status"].string!)
+              return
+        }
+            
+        if let responseDict = responseObject["image_result"].arrayObject
+        {
+                let toModel = responseDict as! [[String:AnyObject]]
+                // Create object
+                var data = [HomePageDetailModel]()
+                for item in toModel {
+                    let single = HomePageDetailModel.build(item)
+                    data.append(single)
+                }
+                // Fire callback
+                successCallback?(data)
+        } else {
+            failureCallback?("An error has occured.")
+        }
+        },
+        onFailure: {(errorMessage: String) -> Void in
+            failureCallback?(errorMessage)
+        }
+      )
     }
 }

@@ -10,9 +10,9 @@ import UIKit
 
 @IBDesignable class RoundedView: UIView {
 
-@IBInspectable var cornerRadiusForUIView: CGFloat = 0.0
-@IBInspectable var borderColorForUIView: UIColor = UIColor.black
-@IBInspectable var borderWidthForUIView: CGFloat = 0.5
+@IBInspectable var cornerRadius: CGFloat = 0.0
+@IBInspectable var borderColor: UIColor = UIColor.black
+@IBInspectable var borderWidth: CGFloat = 0.5
 private var customBackgroundColor = UIColor.white
 override var backgroundColor: UIColor?{
     didSet {
@@ -39,16 +39,17 @@ required init?(coder aDecoder: NSCoder) {
     self.setup()
 }
 
-//override func draw(_ rect: CGRect) {
-//    customBackgroundColor.setFill()
-//    UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadiusForUIView).fill()
-//
-//    let borderRect = bounds.insetBy(dx: borderWidth/2, dy: borderWidth/2)
-//    let borderPath = UIBezierPath(roundedRect: borderRect, cornerRadius: cornerRadius - borderWidth/2)
-//    borderColorForUIView.setStroke()
-//    borderPath.lineWidth = borderWidth
-//    borderPath.stroke()
-//
-//    // whatever else you need drawn
-//}
+override func draw(_ rect: CGRect) {
+    customBackgroundColor.setFill()
+    UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius).fill()
+
+    let borderRect = bounds.insetBy(dx: borderWidth/2, dy: borderWidth/2)
+    let borderPath = UIBezierPath(roundedRect: borderRect, cornerRadius: cornerRadius - borderWidth/2)
+    borderColor.setStroke()
+    borderPath.lineWidth = borderWidth
+    borderPath.stroke()
+
+    // whatever else you need drawn
+ }
 }
+
