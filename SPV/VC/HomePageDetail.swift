@@ -17,6 +17,7 @@ class HomePageDetail: UIViewController {
     @IBOutlet weak var shareOutlet: UIButton!
     @IBOutlet weak var descripLabel: UILabel!
     @IBOutlet weak var descrip: UILabel!
+
     
     var index = 0
     var inForwardDirection = true
@@ -41,6 +42,7 @@ class HomePageDetail: UIViewController {
         // Do any additional setup after loading the view.
         self.callAPI()
         self.updateDetails()
+        //self.addGradienttobutton()
     }
     
     
@@ -50,6 +52,12 @@ class HomePageDetail: UIViewController {
         presenter.getHomeDetailResp(user_id: "1", newsfeed_id: newsfeed_id)
     }
     
+    open func addGradienttobutton ()
+    {
+        let leftColor =  UIColor(red: 5.0/255.0, green: 104.0/255.0, blue: 214.0/255.0, alpha: 1.0)
+        let rightColor =  UIColor(red: 3.0/255.0, green: 53.0/255.0, blue: 107.0/255.0, alpha: 1.0)
+        self.shareOutlet.addGradient(colors:[leftColor,rightColor], locations: [0.0, 1.0])
+    }
 
     
     func updateDetails() {

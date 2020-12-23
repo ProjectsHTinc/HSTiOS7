@@ -118,10 +118,8 @@ class otp: UIViewController,UITextFieldDelegate,LoginView {
         }
     
     @IBAction func resendOTP(_ sender: Any) {
-        
         presenterLoginService.attachView(view: self)
         presenterLoginService.getOtp(mobile_no: self.mobileNumber)
-        
     }
     
     @IBAction func verifyButton(_ sender: Any) {
@@ -172,8 +170,8 @@ class otp: UIViewController,UITextFieldDelegate,LoginView {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
        // Get the new view controller using segue.destination.
        // Pass the selected object to the new view controller.
-       if (segue.identifier == ""){
-//        _ = segue.destination as!
+       if (segue.identifier == "to_Dashboard"){
+            let _ = segue.destination as! TabbarController
        }
     }
     
@@ -196,7 +194,7 @@ extension otp: OtpView {
     }
     func setOtp(otpValue: [OtpData]) {
          otpData = otpValue
-         self.performSegue(withIdentifier: "", sender: self)
+         self.performSegue(withIdentifier: "to_Dashboard", sender: self)
     }
     func setEmptyOtp(errorMessage: String) {
         AlertController.shared.showAlert(targetVc: self, title: Globals.alertTitle, message: errorMessage, complition: {

@@ -17,8 +17,6 @@ class OTPModel {
     var language_id: String?
     var profile_pic: String?
     
-
-
     // MARK: Instance Method
     func loadFromDictionary(_ dict: [String: AnyObject])
     {
@@ -50,6 +48,5 @@ class OTPModel {
         otp.loadFromDictionary(dict)
         return otp
     }
-
 
 }

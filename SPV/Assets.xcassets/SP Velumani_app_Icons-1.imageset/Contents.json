@@ -1,10 +1,12 @@
 {
   "images" : [
     {
+      "filename" : "SP Velumani_app_Icons-1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "SP Velumani_app_Icons-01@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

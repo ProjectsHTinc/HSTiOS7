@@ -17,7 +17,6 @@ enum UserDefaultsKey : String
       case userNamekey
       case userProfilekey
       case profileInfokey
-
 }
 
 extension UserDefaults

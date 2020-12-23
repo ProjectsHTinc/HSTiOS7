@@ -61,11 +61,11 @@ class login: UIViewController,UITextFieldDelegate,LoginView {
     }
     
     func requestToOtp()
-       {
+    {
            DispatchQueue.main.async {
                // Run UI Updates or call completion block
                self.presenter.attachView(view: self)
-               self.presenter.getOtp(mobile_no: self.phoneNum.text!.replacingOccurrences(of: " ", with: ""))
+               self.presenter.getOtp(mobile_no: self.phoneNum.text!)
            }
     }
     
@@ -95,7 +95,7 @@ class login: UIViewController,UITextFieldDelegate,LoginView {
        let nav = segue.destination as! UINavigationController
        let vc = nav.topViewController as! otp
        vc.otp = sender as! String
-       vc.mobileNumber = self.phoneNum.text!.replacingOccurrences(of: " ", with: "")
+       vc.mobileNumber = self.phoneNum.text!
     }
     }
 }

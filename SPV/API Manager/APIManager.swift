@@ -36,6 +36,10 @@ class APIManager: NSObject {
          case allEventsUrl = "apiuser/all_events/"
          case socilaMediaUrl = "apiuser/spv_socialmedia/"
          case homePageUrl = "apiuser/newsfeed_details/"
+         case profileUpdateUrl  = "apiuser/profile_update/"
+         case profilePicUrl     = "apiuser/profilepic_update/1/"
+         case profileDetailsUrl = "apiuser/profile_details/"
+         case electionDetails   = "apiuser/party_elections/"
 
     }
          
@@ -61,7 +65,7 @@ class APIManager: NSObject {
     
     func callAPILogin(mobile_no:String,onSuccess successCallback: ((_ login: LoginModel) -> Void)?,onFailure failureCallback: ((_ errorMessage: String) -> Void)?) {
         // Build URL
-        let url = MAIN_URL + Endpoint.loginUrl.rawValue
+        let url = MAIN_URL + Endpoint.otpUrl.rawValue
         // Set Parameters
         let parameters: Parameters =  ["mobile_number": mobile_no]
         // call API
@@ -69,10 +73,10 @@ class APIManager: NSObject {
         // Create dictionary
         print(responseObject)
           
-          guard let msg = responseObject["msg"].string, msg == "OTP Generated" else{
+        guard let msg = responseObject["msg"].string, msg == "OTP Generated" else{
               failureCallback?(responseObject["msg"].string!)
               return
-        }
+         }
             
             let mobile_otp =  responseObject["otp"].string
             let message =  responseObject["msg"].string
@@ -95,7 +99,7 @@ class APIManager: NSObject {
     // MARK: MAKE LOGIN REQUEST
     func callAPIOTP(mobile_no:String, otp:String, onSuccess successCallback: ((_ otp: [OTPModel]) -> Void)?,onFailure failureCallback: ((_ errorMessage: String) -> Void)?) {
            // Build URL
-           let url = MAIN_URL + Endpoint.otpUrl.rawValue
+           let url = MAIN_URL + Endpoint.loginUrl.rawValue
            // Set Parameters
            let parameters: Parameters =  ["mobile_number": mobile_no, "otp": otp,  "device_token":"abcd" , "device_type": Globals.device_type]
            // call API
@@ -339,4 +343,136 @@ class APIManager: NSObject {
         }
       )
     }
+    
+    func callAPIUserProfileDetails(user_id:String, onSuccess successCallback: ((_ userProfileModel: UserProfileModel) -> Void)?,onFailure failureCallback: ((_ errorMessage: String) -> Void)?) {
+        // Build URL
+        let url =  MAIN_URL + Endpoint.profileDetailsUrl.rawValue
+        // Set Parameters
+        let parameters: Parameters =  ["user_id": user_id]
+        // call API
+        self.createRequest(url, method: .post, headers: nil, parameters: parameters as? [String : String], onSuccess: {(responseObject: JSON) -> Void in
+        // Create dictionary
+        print(responseObject)
+          
+          guard let status = responseObject["status"].string, status == "Success" else{
+              failureCallback?(responseObject["msg"].string!)
+              return
+        }
+
+          let respphone_number = responseObject["user_details"]["phone_number"].int
+          let resPro_pic = responseObject["user_details"]["profile_pic"].string
+          let respemail_id = responseObject["user_details"]["email_id"].string
+          let respfull_name = responseObject["user_details"]["full_name"].string
+          let respdob = responseObject["user_details"]["dob"].string
+//          let respgender = responseObject["user_details"]["gender"].string
+//          let respuser_id = responseObject["user_details"]["id"].string
+
+          // Create object
+          let sendToModel = UserProfileModel()
+          sendToModel.phone_number = respphone_number
+          sendToModel.profile_pic = resPro_pic
+          sendToModel.email_id = respemail_id
+          sendToModel.full_name = respfull_name
+          sendToModel.dob = respdob
+//          sendToModel.gender = respgender
+//         sendToModel.user_id = respuser_id
+          successCallback?(sendToModel)
+          
+        },
+        onFailure: {(errorMessage: String) -> Void in
+            failureCallback?(errorMessage)
+        }
+     )
+    }
+    
+    func callAPIUserProfileUpdate(user_id:String,name:String,dob:String,phone:String,email:String,gender:String, onSuccess successCallback: ((_ userProfileUpdateModel: UserProfileUpdateModel) -> Void)?,onFailure failureCallback: ((_ errorMessage: String) -> Void)?) {
+        // Build URL
+        let url = MAIN_URL + Endpoint.profileUpdateUrl.rawValue
+        // Set Parameters
+        let parameters: Parameters =  ["user_id": user_id,"full_name": name,"dob": dob,"phone_number": phone,"email_id": email,"gender": gender]
+        // call API
+        self.createRequest(url, method: .post, headers: nil, parameters: parameters as? [String : String], onSuccess: {(responseObject: JSON) -> Void in
+        // Create dictionary
+        print(responseObject)
+          
+          guard let status = responseObject["status"].string, status == "success" else{
+              failureCallback?(responseObject["msg"].string!)
+              return
+        }
+
+         let respMsg = responseObject["msg"].string
+         let respStatus = responseObject["status"].string
+
+
+         // Create object
+         let sendToModel = UserProfileUpdateModel()
+         sendToModel.msg = respMsg
+         sendToModel.status = respStatus
+        
+        successCallback?(sendToModel)
+        },
+        onFailure: {(errorMessage: String) -> Void in
+            failureCallback?(errorMessage)
+        }
+     )
+    }
+    
+    //MARK: GET USER PROFILE PIC UPDATE RESPONSE
+    func callAPIUserProfilePicUpdate(user_id:String, onSuccess successCallback: ((_ userProfilePicModel: UserProfilePicModel) -> Void)?,onFailure failureCallback: ((_ errorMessage: String) -> Void)?) {
+        // Build URL
+        let url = MAIN_URL + Endpoint.profilePicUrl.rawValue + user_id
+        // Set Parameters
+        let parameters: Parameters =  ["user_pic": ""]
+        // call API
+        self.createRequest(url, method: .post, headers: nil, parameters: parameters as? [String : String], onSuccess: {(responseObject: JSON) -> Void in
+        // Create dictionary
+        print(responseObject)
+
+          guard let status = responseObject["status"].string, status == "Success" else{
+              failureCallback?(responseObject["msg"].string!)
+              return
+        }
+
+        },
+        onFailure: {(errorMessage: String) -> Void in
+            failureCallback?(errorMessage)
+        }
+     )
+    }
+    
+    func electionAPI(user_id:String, onSuccess successCallback: ((_ resp: [ElectionModel]) -> Void)?,onFailure failureCallback: ((_ errorMessage: String) -> Void)?) {
+         // Build URL
+         let url = MAIN_URL + Endpoint.electionDetails.rawValue
+         // Set Parameters
+         let parameters: Parameters =  ["user_id": user_id]
+         // call API
+         self.createRequest(url, method: .post, headers: nil, parameters: parameters as? [String : String], onSuccess: {(responseObject: JSON) -> Void in
+         // Create dictionary
+         print(responseObject)
+
+           guard let status = responseObject["status"].string, status == "Success" else{
+               failureCallback?(responseObject["msg"
+               ].string!)
+               return
+         }
+          if let responseDict = responseObject["election_result"].arrayObject
+          {
+                  let toModel = responseDict as! [[String:AnyObject]]
+                  // Create object
+                  var data = [ElectionModel]()
+                  for item in toModel {
+                      let single = ElectionModel.build(item)
+                      data.append(single)
+                  }
+                  // Fire callback
+                  successCallback?(data)
+          } else {
+              failureCallback?("An error has occured.")
+          }
+         },
+         onFailure: {(errorMessage: String) -> Void in
+             failureCallback?(errorMessage)
+         }
+      )
+     }
 }

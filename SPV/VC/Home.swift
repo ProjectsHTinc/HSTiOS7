@@ -43,13 +43,12 @@ class Home: UIViewController, NewsFeedView {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        spvData = ["Your SPV","Gallery","Namakaaga Initiatives","Namakaaga Initiatives","Namakaaga Initiatives 1","Namakaaga"]
+        spvData = ["Your SPV","Gallery","Namakaaga Initiatives","Party"]
         self.tableView.backgroundColor = UIColor.white
         self.callAPI(from: "home", search_text: "no", categoery: "0", nf_category_id: "0" ,offset: "0", rowcount: "50")
         if let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
            flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         }
-        
     }
     
     func callAPI(from:String,search_text: String, categoery:String, nf_category_id:String, offset:String, rowcount:String)

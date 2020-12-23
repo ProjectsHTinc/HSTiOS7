@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1870FD47256E5EDC001E60DF /* ProfilePicUploadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870FD43256E5EDC001E60DF /* ProfilePicUploadModel.swift */; };
+		1870FD48256E5EDC001E60DF /* profileUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870FD44256E5EDC001E60DF /* profileUpdate.swift */; };
+		1870FD49256E5EDC001E60DF /* ElectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870FD45256E5EDC001E60DF /* ElectionModel.swift */; };
+		1870FD4A256E5EDC001E60DF /* profileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870FD46256E5EDC001E60DF /* profileModel.swift */; };
+		1870FD52256E5EF4001E60DF /* profileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870FD4E256E5EF4001E60DF /* profileService.swift */; };
+		1870FD53256E5EF4001E60DF /* ProfileUpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870FD4F256E5EF4001E60DF /* ProfileUpdateService.swift */; };
+		1870FD54256E5EF4001E60DF /* ProfilePicUploadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870FD50256E5EF4001E60DF /* ProfilePicUploadService.swift */; };
+		1870FD55256E5EF4001E60DF /* ElectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870FD51256E5EF4001E60DF /* ElectionService.swift */; };
+		1870FD5D256E5F06001E60DF /* presenterUpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870FD59256E5F06001E60DF /* presenterUpdateService.swift */; };
+		1870FD5E256E5F06001E60DF /* profilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870FD5A256E5F06001E60DF /* profilePresenter.swift */; };
+		1870FD5F256E5F06001E60DF /* ProfilePicUploadPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870FD5B256E5F06001E60DF /* ProfilePicUploadPresenter.swift */; };
+		1870FD60256E5F06001E60DF /* ElectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870FD5C256E5F06001E60DF /* ElectionPresenter.swift */; };
+		1870FD6A256E5F22001E60DF /* Elections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870FD64256E5F21001E60DF /* Elections.swift */; };
+		1870FD6B256E5F22001E60DF /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870FD65256E5F22001E60DF /* History.swift */; };
+		1870FD6C256E5F22001E60DF /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870FD66256E5F22001E60DF /* Profile.swift */; };
+		1870FD6D256E5F22001E60DF /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870FD67256E5F22001E60DF /* Party.swift */; };
+		1870FD6E256E5F22001E60DF /* ideology.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870FD68256E5F22001E60DF /* ideology.swift */; };
+		1870FD6F256E5F22001E60DF /* AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870FD69256E5F22001E60DF /* AppSetting.swift */; };
+		1870FD74256E5F31001E60DF /* ElectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870FD73256E5F31001E60DF /* ElectionCell.swift */; };
+		1870FD79256E5F54001E60DF /* TextFieldWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870FD78256E5F54001E60DF /* TextFieldWithImage.swift */; };
 		478C663790F745A5A4A872AF /* Pods_SPV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F36DCB3F859B52E36512BF /* Pods_SPV.framework */; };
 		6B0E2AC32531CED80032ED45 /* loginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0E2AC22531CED80032ED45 /* loginService.swift */; };
 		6B268EDA25596AED005D0B8F /* NewsFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B268ED925596AED005D0B8F /* NewsFeedModel.swift */; };
@@ -91,6 +111,26 @@
 
 /* Begin PBXFileReference section */
 		05F36DCB3F859B52E36512BF /* Pods_SPV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SPV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1870FD43256E5EDC001E60DF /* ProfilePicUploadModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePicUploadModel.swift; sourceTree = "<group>"; };
+		1870FD44256E5EDC001E60DF /* profileUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileUpdate.swift; sourceTree = "<group>"; };
+		1870FD45256E5EDC001E60DF /* ElectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElectionModel.swift; sourceTree = "<group>"; };
+		1870FD46256E5EDC001E60DF /* profileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileModel.swift; sourceTree = "<group>"; };
+		1870FD4E256E5EF4001E60DF /* profileService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileService.swift; sourceTree = "<group>"; };
+		1870FD4F256E5EF4001E60DF /* ProfileUpdateService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileUpdateService.swift; sourceTree = "<group>"; };
+		1870FD50256E5EF4001E60DF /* ProfilePicUploadService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePicUploadService.swift; sourceTree = "<group>"; };
+		1870FD51256E5EF4001E60DF /* ElectionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElectionService.swift; sourceTree = "<group>"; };
+		1870FD59256E5F06001E60DF /* presenterUpdateService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = presenterUpdateService.swift; sourceTree = "<group>"; };
+		1870FD5A256E5F06001E60DF /* profilePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profilePresenter.swift; sourceTree = "<group>"; };
+		1870FD5B256E5F06001E60DF /* ProfilePicUploadPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePicUploadPresenter.swift; sourceTree = "<group>"; };
+		1870FD5C256E5F06001E60DF /* ElectionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElectionPresenter.swift; sourceTree = "<group>"; };
+		1870FD64256E5F21001E60DF /* Elections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Elections.swift; sourceTree = "<group>"; };
+		1870FD65256E5F22001E60DF /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		1870FD66256E5F22001E60DF /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		1870FD67256E5F22001E60DF /* Party.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
+		1870FD68256E5F22001E60DF /* ideology.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ideology.swift; sourceTree = "<group>"; };
+		1870FD69256E5F22001E60DF /* AppSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSetting.swift; sourceTree = "<group>"; };
+		1870FD73256E5F31001E60DF /* ElectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElectionCell.swift; sourceTree = "<group>"; };
+		1870FD78256E5F54001E60DF /* TextFieldWithImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldWithImage.swift; sourceTree = "<group>"; };
 		34FB927C4CC488B8717DAFCE /* Pods-SPV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SPV.release.xcconfig"; path = "Target Support Files/Pods-SPV/Pods-SPV.release.xcconfig"; sourceTree = "<group>"; };
 		6B0E2AC12531CED10032ED45 /* loginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginPresenter.swift; sourceTree = "<group>"; };
 		6B0E2AC22531CED80032ED45 /* loginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginService.swift; sourceTree = "<group>"; };
@@ -114,9 +154,9 @@
 		6B8E492325336F4B0005B001 /* otpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = otpService.swift; path = SPV/Service/otpService.swift; sourceTree = SOURCE_ROOT; };
 		6B8E492525336F670005B001 /* otpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = otpPresenter.swift; path = SPV/Presenter/otpPresenter.swift; sourceTree = SOURCE_ROOT; };
 		6BB4425C254AA4E600ADE8C5 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
-		6BB4426B254AB9F200ADE8C5 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../../../../HSTiOS6/OPS/OPS/Helper/HMSegmentControl/ViewController.h; sourceTree = "<group>"; };
+		6BB4426B254AB9F200ADE8C5 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
 		6BB4426C254AB9FA00ADE8C5 /* SPV-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPV-Bridging-Header.h"; sourceTree = "<group>"; };
-		6BB4426D254AB9FB00ADE8C5 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../../../../HSTiOS6/OPS/OPS/Helper/HMSegmentControl/ViewController.m; sourceTree = "<group>"; };
+		6BB4426D254AB9FB00ADE8C5 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
 		6BBBA60125342CA800470E96 /* GradientColours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GradientColours.swift; path = SPV/Helper/GradientColours.swift; sourceTree = SOURCE_ROOT; };
 		6BBBA60325343CA900470E96 /* BottomBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BottomBorder.swift; path = SPV/Helper/BottomBorder.swift; sourceTree = SOURCE_ROOT; };
 		6BBBA60525344C2B00470E96 /* blog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = blog.swift; path = SPV/VC/blog.swift; sourceTree = SOURCE_ROOT; };
@@ -272,6 +312,10 @@
 				6B268ED925596AED005D0B8F /* NewsFeedModel.swift */,
 				6BF03D17255D26CD00F7ADEC /* SocilaMediaModel.swift */,
 				6B3D83DB25639A4800360C88 /* HomePageDetailModel.swift */,
+				1870FD45256E5EDC001E60DF /* ElectionModel.swift */,
+				1870FD46256E5EDC001E60DF /* profileModel.swift */,
+				1870FD43256E5EDC001E60DF /* ProfilePicUploadModel.swift */,
+				1870FD44256E5EDC001E60DF /* profileUpdate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -285,6 +329,10 @@
 				6B268EE325596B93005D0B8F /* NewsFeedPresenter.swift */,
 				6BF03D21255D28DA00F7ADEC /* SocialMediaPresenter.swift */,
 				6B3D83E525639A8600360C88 /* HomePageDetailPresenter.swift */,
+				1870FD5C256E5F06001E60DF /* ElectionPresenter.swift */,
+				1870FD59256E5F06001E60DF /* presenterUpdateService.swift */,
+				1870FD5B256E5F06001E60DF /* ProfilePicUploadPresenter.swift */,
+				1870FD5A256E5F06001E60DF /* profilePresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -298,6 +346,10 @@
 				6B268EF52559743D005D0B8F /* NewsFeedServices.swift */,
 				6BF03D1C255D288600F7ADEC /* SocialMediaService.swift */,
 				6B3D83E025639A6D00360C88 /* HomePageDetailServices.swift */,
+				1870FD51256E5EF4001E60DF /* ElectionService.swift */,
+				1870FD50256E5EF4001E60DF /* ProfilePicUploadService.swift */,
+				1870FD4E256E5EF4001E60DF /* profileService.swift */,
+				1870FD4F256E5EF4001E60DF /* ProfileUpdateService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -316,6 +368,12 @@
 				6BF03D12255D1B7A00F7ADEC /* SocilaMedia.swift */,
 				6B3D83D62563958F00360C88 /* HomePageDetail.swift */,
 				6BD098C02563B3DC00445189 /* ChangeLanguage.swift */,
+				1870FD69256E5F22001E60DF /* AppSetting.swift */,
+				1870FD64256E5F21001E60DF /* Elections.swift */,
+				1870FD65256E5F22001E60DF /* History.swift */,
+				1870FD68256E5F22001E60DF /* ideology.swift */,
+				1870FD67256E5F22001E60DF /* Party.swift */,
+				1870FD66256E5F22001E60DF /* Profile.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -354,6 +412,7 @@
 				6BDF82402542C8A200E376B9 /* HomeCollectionViewCell.swift */,
 				6BDF82452542C8BF00E376B9 /* HomeTableViewCell.swift */,
 				6BD098B12563A8D100445189 /* ImageSliderCell.swift */,
+				1870FD73256E5F31001E60DF /* ElectionCell.swift */,
 			);
 			name = Cell;
 			path = Cells;
@@ -384,6 +443,7 @@
 				6BBBA60125342CA800470E96 /* GradientColours.swift */,
 				6BBBA60325343CA900470E96 /* BottomBorder.swift */,
 				6B268EE825596F7F005D0B8F /* GlobalVariables.swift */,
+				1870FD78256E5F54001E60DF /* TextFieldWithImage.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -600,15 +660,24 @@
 				6BBBA60425343CAA00470E96 /* BottomBorder.swift in Sources */,
 				6B3D83F725639F5800360C88 /* LocalizationSystem.swift in Sources */,
 				6BD098B22563A8D200445189 /* ImageSliderCell.swift in Sources */,
+				1870FD54256E5EF4001E60DF /* ProfilePicUploadService.swift in Sources */,
+				1870FD60256E5F06001E60DF /* ElectionPresenter.swift in Sources */,
+				1870FD5F256E5F06001E60DF /* ProfilePicUploadPresenter.swift in Sources */,
+				1870FD48256E5EDC001E60DF /* profileUpdate.swift in Sources */,
 				6BEA911F252DDC4900F029C0 /* APIUrl.swift in Sources */,
+				1870FD74256E5F31001E60DF /* ElectionCell.swift in Sources */,
+				1870FD6F256E5F22001E60DF /* AppSetting.swift in Sources */,
 				6B268EF62559743D005D0B8F /* NewsFeedServices.swift in Sources */,
 				6BD500DF25494DA800A0BA2D /* HomeModel.swift in Sources */,
+				1870FD6D256E5F22001E60DF /* Party.swift in Sources */,
 				6BEA9125252DDCD500F029C0 /* ShadowEffectForUIView.swift in Sources */,
+				1870FD5E256E5F06001E60DF /* profilePresenter.swift in Sources */,
 				6BEA9123252DDCBA00F029C0 /* TapToDismissKeypad.swift in Sources */,
 				6BBBA608253460AE00470E96 /* userDefault.swift in Sources */,
 				6BDF82412542C8A200E376B9 /* HomeCollectionViewCell.swift in Sources */,
 				6B3D83D72563958F00360C88 /* HomePageDetail.swift in Sources */,
 				6B0E2AC32531CED80032ED45 /* loginService.swift in Sources */,
+				1870FD6C256E5F22001E60DF /* Profile.swift in Sources */,
 				6BDF82462542C8BF00E376B9 /* HomeTableViewCell.swift in Sources */,
 				6B369D4325323011001C1F29 /* loginPresenter.swift in Sources */,
 				6BF03D1D255D288600F7ADEC /* SocialMediaService.swift in Sources */,
@@ -617,37 +686,48 @@
 				6B268EE425596B93005D0B8F /* NewsFeedPresenter.swift in Sources */,
 				6BEA9131252DDFD600F029C0 /* ActivityIndicator.swift in Sources */,
 				6BEA912D252DDD5500F029C0 /* HTMLToString.swift in Sources */,
+				1870FD4A256E5EDC001E60DF /* profileModel.swift in Sources */,
 				6BF03D0E255D1B6700F7ADEC /* SocialInitiatives.swift in Sources */,
 				6B8E492625336F670005B001 /* otpPresenter.swift in Sources */,
 				6BBBA60225342CA900470E96 /* GradientColours.swift in Sources */,
 				6BDF824B2542CC0600E376B9 /* Home.swift in Sources */,
+				1870FD55256E5EF4001E60DF /* ElectionService.swift in Sources */,
 				6BF03D09255D1B2900F7ADEC /* Events.swift in Sources */,
 				6BD098C12563B3DC00445189 /* ChangeLanguage.swift in Sources */,
 				6B268EDA25596AED005D0B8F /* NewsFeedModel.swift in Sources */,
+				1870FD47256E5EDC001E60DF /* ProfilePicUploadModel.swift in Sources */,
 				6B3D83E125639A6D00360C88 /* HomePageDetailServices.swift in Sources */,
+				1870FD52256E5EF4001E60DF /* profileService.swift in Sources */,
 				6B268EE925596F7F005D0B8F /* GlobalVariables.swift in Sources */,
 				6B369D3E25321257001C1F29 /* login.swift in Sources */,
 				6B3D83DC25639A4800360C88 /* HomePageDetailModel.swift in Sources */,
 				6BB4426E254AB9FB00ADE8C5 /* ViewController.m in Sources */,
+				1870FD49256E5EDC001E60DF /* ElectionModel.swift in Sources */,
 				6BBBA60625344C2C00470E96 /* blog.swift in Sources */,
 				6BEA912B252DDD4300F029C0 /* DateFormatter.swift in Sources */,
+				1870FD5D256E5F06001E60DF /* presenterUpdateService.swift in Sources */,
 				6BEA9129252DDD1900F029C0 /* NavigationBarTitleOnLeftSide.swift in Sources */,
 				6BEA9121252DDC6C00F029C0 /* APIFunctionName.swift in Sources */,
 				6BEA90DF252DCC4E00F029C0 /* AppDelegate.swift in Sources */,
 				6BEA9127252DDCF500F029C0 /* RoundedCornerForUIView.swift in Sources */,
 				6BD500E425494DBB00A0BA2D /* HomeServices.swift in Sources */,
+				1870FD6B256E5F22001E60DF /* History.swift in Sources */,
 				6BEA912F252DDE9C00F029C0 /* AlertController.swift in Sources */,
 				6B369D4525323213001C1F29 /* constants.swift in Sources */,
 				6BF03D18255D26CD00F7ADEC /* SocilaMediaModel.swift in Sources */,
 				6B8E492025335A3D0005B001 /* Reachability.swift in Sources */,
 				6BD500E925494DD000A0BA2D /* HomePresenter.swift in Sources */,
 				6B369D422532214E001C1F29 /* otp.swift in Sources */,
+				1870FD6A256E5F22001E60DF /* Elections.swift in Sources */,
 				6BB4425D254AA4E600ADE8C5 /* News.swift in Sources */,
 				6BDCBDEA2541A8140082AA17 /* TabbarController.swift in Sources */,
 				6B8E492225336F300005B001 /* otpModel.swift in Sources */,
+				1870FD53256E5EF4001E60DF /* ProfileUpdateService.swift in Sources */,
 				6BEA90E1252DCC4E00F029C0 /* SceneDelegate.swift in Sources */,
 				6B369D40253212F6001C1F29 /* loginModel.swift in Sources */,
 				6BF03D22255D28DA00F7ADEC /* SocialMediaPresenter.swift in Sources */,
+				1870FD79256E5F54001E60DF /* TextFieldWithImage.swift in Sources */,
+				1870FD6E256E5F22001E60DF /* ideology.swift in Sources */,
 				6B8E492425336F4B0005B001 /* otpService.swift in Sources */,
 				6BF03D13255D1B7A00F7ADEC /* SocilaMedia.swift in Sources */,
 			);
