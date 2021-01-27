@@ -8,13 +8,14 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 class TabbarController: UITabBarController, UITabBarControllerDelegate, UISearchControllerDelegate, UISearchBarDelegate, NewsFeedView {
 
     @IBOutlet weak var menuOutlet: UIBarButtonItem!
     @IBOutlet weak var languageOutlet: UIBarButtonItem!
     @IBOutlet weak var searchOutlet: UIBarButtonItem!
     @IBOutlet weak var notificationOutlet: UIBarButtonItem!
-    
+                   
     var searchBar = UISearchController()
     var NewsFeed = NewsFeedPresenter(newsFeedServices: NewsFeedServices())
     var NewsFeedData = [newsFeedData]()

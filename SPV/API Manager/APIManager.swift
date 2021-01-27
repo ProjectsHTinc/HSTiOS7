@@ -97,7 +97,7 @@ class APIManager: NSObject {
     }
     
     // MARK: MAKE LOGIN REQUEST
-    func callAPIOTP(mobile_no:String, otp:String, onSuccess successCallback: ((_ otp: [OTPModel]) -> Void)?,onFailure failureCallback: ((_ errorMessage: String) -> Void)?) {
+    func callAPIOTP(mobile_no:String, otp:String, onSuccess successCallback: ((_ otp: OTPModel) -> Void)?,onFailure failureCallback: ((_ errorMessage: String) -> Void)?) {
            // Build URL
            let url = MAIN_URL + Endpoint.loginUrl.rawValue
            // Set Parameters
@@ -111,25 +111,26 @@ class APIManager: NSObject {
                  return
            }
                               
-           if let responseDict = responseObject["userData"].arrayObject
-            {
-                let otpModel = responseDict as! [[String:AnyObject]]
-                // Create object
-                var data = [OTPModel]()
-                for item in otpModel {
-                    let single = OTPModel.build(item)
-                    data.append(single)
-                }
-                   // Fire callback
-                successCallback?(data)
-              }else {
-                   failureCallback?("An error has occured.")
-               }
-           },
-           onFailure: {(errorMessage: String) -> Void in
-               failureCallback?(errorMessage)
-           }
-         )
+            let full_name =  responseObject["userData"]["full_name"].string
+            let language_id =  responseObject["userData"]["language_id"].string
+            let phone_number =  responseObject["userData"]["phone_number"].string
+            let profile_pic =  responseObject["userData"]["profile_pic"].string
+            let user_id =  responseObject["userData"]["user_id"].string
+
+            let sendToModel = OTPModel()
+            sendToModel.full_name = full_name
+            sendToModel.language_id = language_id
+            sendToModel.phone_number = phone_number
+            sendToModel.profile_pic = profile_pic
+            sendToModel.user_id = user_id
+
+            successCallback?(sendToModel)
+            
+        },
+        onFailure: {(errorMessage: String) -> Void in
+            failureCallback?(errorMessage)
+        }
+      )
     }
     
     func homeAPI (from:String, search_text:String, categoery:String, nf_category_id:String, offset:String, rowcount:String, onSuccess successCallback: ((_ resp: [HomeModel]) -> Void)?,onFailure failureCallback: ((_ errorMessage: String) -> Void)?) {

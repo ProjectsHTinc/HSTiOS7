@@ -21,7 +21,7 @@ class login: UIViewController,UITextFieldDelegate,LoginView {
         print ("test12345678")
         // Do any additional setup after loading the view.
          self.hideKeyboardWhenTappedAround()
-         //view.bindToKeyboard()
+         view.bindToKeyboard()
          activityView.isHidden = true
          phoneNum.attributedPlaceholder = NSAttributedString(string: "Enter Your Mobile Number", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         

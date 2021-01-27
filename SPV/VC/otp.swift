@@ -167,12 +167,16 @@ class otp: UIViewController,UITextFieldDelegate,LoginView {
         presenterOtpService.getOtpForOtpPage(mobile_no: self.mobileNumber, otp: self.otp)
         
     }
+  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
        // Get the new view controller using segue.destination.
        // Pass the selected object to the new view controller.
+      
        if (segue.identifier == "to_Dashboard"){
-            let _ = segue.destination as! TabbarController
-       }
+       
+            let _ = segue.destination as! UINavigationController
+     
+        }
     }
     
     @objc public func backButtonClick()
@@ -184,23 +188,27 @@ class otp: UIViewController,UITextFieldDelegate,LoginView {
 
 extension otp: OtpView {
     
+    func setLoginOtp(full_name: String, user_id: String, profile_pic: String, language_id: String, phone_number: String) {
+        UserDefaults.standard.set(user_id, forKey: UserDefaultsKey.userIDkey.rawValue)
+        GlobalVariables.shared.user_id = UserDefaults.standard.object(forKey: UserDefaultsKey.userIDkey.rawValue) as! String
+        print("karan\(user_id)")
+        self.performSegue(withIdentifier: "to_Dashboard", sender:self )
+    }
+    
     func startLoadingOtp() {
         activityView.isHidden = false
         activityView.startAnimating()
     }
+    
     func finishLoadingOtp() {
          activityView.isHidden = true
          activityView.stopAnimating()
     }
-    func setOtp(otpValue: [OtpData]) {
-         otpData = otpValue
-         self.performSegue(withIdentifier: "to_Dashboard", sender: self)
-    }
+    
     func setEmptyOtp(errorMessage: String) {
         AlertController.shared.showAlert(targetVc: self, title: Globals.alertTitle, message: errorMessage, complition: {
         })
     }
-    
 }
 
 

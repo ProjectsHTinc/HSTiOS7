@@ -28,6 +28,8 @@
 		1870FD74256E5F31001E60DF /* ElectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870FD73256E5F31001E60DF /* ElectionCell.swift */; };
 		1870FD79256E5F54001E60DF /* TextFieldWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870FD78256E5F54001E60DF /* TextFieldWithImage.swift */; };
 		478C663790F745A5A4A872AF /* Pods_SPV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F36DCB3F859B52E36512BF /* Pods_SPV.framework */; };
+		6B0652BE25C14B5D00F43913 /* TopMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B0652BD25C14B5D00F43913 /* TopMenu.storyboard */; };
+		6B0652C325C1675700F43913 /* ViewBindToKeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0652C225C1675600F43913 /* ViewBindToKeyBoard.swift */; };
 		6B0E2AC32531CED80032ED45 /* loginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0E2AC22531CED80032ED45 /* loginService.swift */; };
 		6B268EDA25596AED005D0B8F /* NewsFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B268ED925596AED005D0B8F /* NewsFeedModel.swift */; };
 		6B268EE425596B93005D0B8F /* NewsFeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B268EE325596B93005D0B8F /* NewsFeedPresenter.swift */; };
@@ -132,6 +134,8 @@
 		1870FD73256E5F31001E60DF /* ElectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElectionCell.swift; sourceTree = "<group>"; };
 		1870FD78256E5F54001E60DF /* TextFieldWithImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldWithImage.swift; sourceTree = "<group>"; };
 		34FB927C4CC488B8717DAFCE /* Pods-SPV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SPV.release.xcconfig"; path = "Target Support Files/Pods-SPV/Pods-SPV.release.xcconfig"; sourceTree = "<group>"; };
+		6B0652BD25C14B5D00F43913 /* TopMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TopMenu.storyboard; sourceTree = "<group>"; };
+		6B0652C225C1675600F43913 /* ViewBindToKeyBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBindToKeyBoard.swift; sourceTree = "<group>"; };
 		6B0E2AC12531CED10032ED45 /* loginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginPresenter.swift; sourceTree = "<group>"; };
 		6B0E2AC22531CED80032ED45 /* loginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginService.swift; sourceTree = "<group>"; };
 		6B268ED925596AED005D0B8F /* NewsFeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedModel.swift; sourceTree = "<group>"; };
@@ -428,6 +432,7 @@
 				6BEA912A252DDD4300F029C0 /* DateFormatter.swift */,
 				6BEA912C252DDD5500F029C0 /* HTMLToString.swift */,
 				6BBBA607253460AE00470E96 /* userDefault.swift */,
+				6B0652C225C1675600F43913 /* ViewBindToKeyBoard.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -463,6 +468,7 @@
 			children = (
 				6BEA90E4252DCC4E00F029C0 /* Main.storyboard */,
 				6BDCBDD625419E7A0082AA17 /* Dashboard.storyboard */,
+				6B0652BD25C14B5D00F43913 /* TopMenu.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -585,6 +591,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BEA90EB252DCC6C00F029C0 /* LaunchScreen.storyboard in Resources */,
+				6B0652BE25C14B5D00F43913 /* TopMenu.storyboard in Resources */,
 				6BDCBDD725419E7A0082AA17 /* Dashboard.storyboard in Resources */,
 				6BEA90E8252DCC6C00F029C0 /* Assets.xcassets in Resources */,
 				6B3D83EF25639EE500360C88 /* Localizable.strings in Resources */,
@@ -726,6 +733,7 @@
 				6BEA90E1252DCC4E00F029C0 /* SceneDelegate.swift in Sources */,
 				6B369D40253212F6001C1F29 /* loginModel.swift in Sources */,
 				6BF03D22255D28DA00F7ADEC /* SocialMediaPresenter.swift in Sources */,
+				6B0652C325C1675700F43913 /* ViewBindToKeyBoard.swift in Sources */,
 				1870FD79256E5F54001E60DF /* TextFieldWithImage.swift in Sources */,
 				1870FD6E256E5F22001E60DF /* ideology.swift in Sources */,
 				6B8E492425336F4B0005B001 /* otpService.swift in Sources */,

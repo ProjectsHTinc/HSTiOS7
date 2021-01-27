@@ -10,7 +10,7 @@ import Foundation
 
 class OTPService {
 
-      public func callAPIOTP(mobile_no:String, otp:String, onSuccess successCallback: ((_ otp: [OTPModel]) -> Void)?,onFailure failureCallback: ((_ errorMessage: String) -> Void)?) {
+      public func callAPIOTP(mobile_no:String, otp:String, onSuccess successCallback: ((_ otp: OTPModel) -> Void)?,onFailure failureCallback: ((_ errorMessage: String) -> Void)?) {
           APIManager.instance.callAPIOTP(
             mobile_no: mobile_no, otp: otp, onSuccess: { (loginData) in
                   successCallback?(loginData)
