@@ -40,7 +40,11 @@ class APIManager: NSObject {
          case profilePicUrl     = "apiuser/profilepic_update/1/"
          case profileDetailsUrl = "apiuser/profile_details/"
          case electionDetails   = "apiuser/party_elections/"
-
+         case positionHeld      = "apiuser/spv_positionheld/"
+         case awards            = "apiuser/spv_awards/"
+         case notableWorks      = "apiuser/spv_notable/"
+         case political         = "apiuser/spv_political/"
+         case personalLife       = "apiuser/spv_personal/"
     }
          
     // Create Request
@@ -476,4 +480,191 @@ class APIManager: NSObject {
          }
       )
      }
+    func positionHeldAPI(user_id:String, onSuccess successCallback: ((_ resp: [PositionHeldModel]) -> Void)?,onFailure failureCallback: ((_ errorMessage: String) -> Void)?) {
+           // Build URL
+           let url = MAIN_URL + Endpoint.positionHeld.rawValue
+           // Set Parameters
+           let parameters: Parameters =  ["user_id": user_id]
+           // call API
+           self.createRequest(url, method: .post, headers: nil, parameters: parameters as? [String : String], onSuccess: {(responseObject: JSON) -> Void in
+           // Create dictionary
+           print(responseObject)
+
+             guard let status = responseObject["msg"].string, status == "Position Details" else{
+                 failureCallback?(responseObject["status"
+                 ].string!)
+                 return
+           }
+            if let responseDict = responseObject["position_result"].arrayObject
+            {
+                    let toModel = responseDict as! [[String:AnyObject]]
+                    // Create object
+                    var data = [PositionHeldModel]()
+                    for item in toModel {
+                        let single = PositionHeldModel.build(item)
+                        data.append(single)
+                    }
+                    // Fire callback
+                    successCallback?(data)
+            } else {
+                failureCallback?("An error has occured.")
+            }
+           },
+           onFailure: {(errorMessage: String) -> Void in
+               failureCallback?(errorMessage)
+           }
+        )
+       }
+    
+    func awardsAPI(user_id:String, onSuccess successCallback: ((_ resp: [AwardsModel]) -> Void)?,onFailure failureCallback: ((_ errorMessage: String) -> Void)?) {
+             // Build URL
+             let url = MAIN_URL + Endpoint.awards.rawValue
+             // Set Parameters
+             let parameters: Parameters =  ["user_id": user_id]
+             // call API
+             self.createRequest(url, method: .post, headers: nil, parameters: parameters as? [String : String], onSuccess: {(responseObject: JSON) -> Void in
+             // Create dictionary
+             print(responseObject)
+
+               guard let status = responseObject["status"].string, status == "Success" else{
+                   failureCallback?(responseObject["msg"
+                   ].string!)
+                   return
+             }
+//                award_page_heading
+//                let resPageTitleEn = responseObject["award_page_heading"]["page_title_en"].string
+//                let resPageTitleTa = responseObject["award_page_heading"]["page_title_ta"].string
+
+                if let responseDict = responseObject["award_result"].arrayObject
+               {
+                      let toModel = responseDict as! [[String:AnyObject]]
+                      // Create object
+                      var data = [AwardsModel]()
+                      for item in toModel {
+                          let single = AwardsModel.build(item)
+                          data.append(single)
+                      }
+                      // Fire callback
+                      successCallback?(data)
+              } else {
+                  failureCallback?("An error has occured.")
+              }
+             },
+             onFailure: {(errorMessage: String) -> Void in
+                 failureCallback?(errorMessage)
+             }
+          )
+         }
+    
+    func notableWorksAPI(user_id:String, onSuccess successCallback: ((_ resp: [NotableWorksModel]) -> Void)?,onFailure failureCallback: ((_ errorMessage: String) -> Void)?) {
+                 // Build URL
+                 let url = MAIN_URL + Endpoint.notableWorks.rawValue
+                 // Set Parameters
+                 let parameters: Parameters =  ["user_id": user_id]
+                 // call API
+                 self.createRequest(url, method: .post, headers: nil, parameters: parameters as? [String : String], onSuccess: {(responseObject: JSON) -> Void in
+                 // Create dictionary
+                 print(responseObject)
+
+                   guard let status = responseObject["status"].string, status == "Success" else{
+                       failureCallback?(responseObject["msg"
+                       ].string!)
+                       return
+                 }
+
+                  if let responseDict = responseObject["position_result"].arrayObject
+                  {
+                          let toModel = responseDict as! [[String:AnyObject]]
+                          // Create object
+                          var data = [NotableWorksModel]()
+                          for item in toModel {
+                              let single = NotableWorksModel.build(item)
+                              data.append(single)
+                          }
+                          // Fire callback
+                          successCallback?(data)
+                  } else {
+                      failureCallback?("An error has occured.")
+                  }
+                 },
+                 onFailure: {(errorMessage: String) -> Void in
+                     failureCallback?(errorMessage)
+                 }
+              )
+        }
+    // Create object
+  
+    func callAPIPoliticalCarrer(user_id:String, onSuccess successCallback: ((_ resp: [PoliticalCarrerModel]) -> Void)?,onFailure failureCallback: ((_ errorMessage: String) -> Void)?) {
+                 // Build URL
+                 let url = MAIN_URL + Endpoint.political.rawValue
+                 // Set Parameters
+                 let parameters: Parameters =  ["user_id": user_id]
+                 // call API
+                 self.createRequest(url, method: .post, headers: nil, parameters: parameters as? [String : String], onSuccess: {(responseObject: JSON) -> Void in
+                 // Create dictionary
+                 print(responseObject)
+
+                   guard let status = responseObject["status"].string, status == "Success" else{
+                       failureCallback?(responseObject["msg"
+                       ].string!)
+                       return
+                 }
+   
+                  if let responseDict = responseObject["political_result"].arrayObject
+                  {
+                          let toModel = responseDict as! [[String:AnyObject]]
+                          // Create object
+                          var data = [PoliticalCarrerModel]()
+                          for item in toModel {
+                              let single = PoliticalCarrerModel.build(item)
+                              data.append(single)
+                          }
+                          // Fire callback
+                          successCallback?(data)
+                  } else {
+                      failureCallback?("An error has occured.")
+                  }
+                 },
+                 onFailure: {(errorMessage: String) -> Void in
+                     failureCallback?(errorMessage)
+                 }
+              )
+        }
+    
+    func callAPIPersonalLife(user_id:String, onSuccess successCallback: ((_ resp: [PersonalLifeModel]) -> Void)?,onFailure failureCallback: ((_ errorMessage: String) -> Void)?) {
+                 // Build URL
+                 let url = MAIN_URL + Endpoint.personalLife.rawValue
+                 // Set Parameters
+                 let parameters: Parameters =  ["user_id": user_id]
+                 // call API
+                 self.createRequest(url, method: .post, headers: nil, parameters: parameters as? [String : String], onSuccess: {(responseObject: JSON) -> Void in
+                 // Create dictionary
+                 print(responseObject)
+
+                   guard let status = responseObject["status"].string, status == "Success" else{
+                       failureCallback?(responseObject["msg"
+                       ].string!)
+                       return
+                 }
+   
+                  if let responseDict = responseObject["personal_result"].arrayObject
+                  {
+                          let toModel = responseDict as! [[String:AnyObject]]
+                          // Create object
+                          var data = [PersonalLifeModel]()
+                          for item in toModel {
+                              let single = PersonalLifeModel.build(item)
+                              data.append(single)
+                          }
+                          // Fire callback
+                          successCallback?(data)
+                  } else {
+                      failureCallback?("An error has occured.")
+                  }
+                 },
+                 onFailure: {(errorMessage: String) -> Void in
+                     failureCallback?(errorMessage)
+                 }
+              )
+         }
 }

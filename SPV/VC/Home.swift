@@ -96,9 +96,11 @@ class Home: UIViewController, NewsFeedView {
             vc.fromView = "home"
 
         }
+        if (segue.identifier == "to_yourSPV"){
+            _ = segue.destination as! YourSpv
+        }
+        
     }
-    
-
 }
 
 extension Home: HomeView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UITableViewDelegate, UITableViewDataSource
@@ -268,4 +270,13 @@ extension Home: HomeView, UICollectionViewDelegate, UICollectionViewDataSource, 
         return UIEdgeInsets(top: 0,left: 15,bottom: 0,right: 0)
     }
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let res = spvData[indexPath.row]
+        print("You selected cell #\(indexPath.item)!")
+        if indexPath.item == 0 {
+            self.performSegue(withIdentifier: "to_yourSPV", sender: self)
+        }
+      
+    }
+    
 }
