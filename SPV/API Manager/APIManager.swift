@@ -323,7 +323,7 @@ class APIManager: NSObject {
         self.createRequest(url, method: .post, headers: nil, parameters: parameters as? [String : String], onSuccess: {(responseObject: JSON) -> Void in
         // Create dictionary
         print(responseObject)
-        guard let status = responseObject["status"].string, status == "Success" else{
+        guard let status = responseObject["status"].string, status == "Success" else {
               failureCallback?(responseObject["status"].string!)
               return
         }

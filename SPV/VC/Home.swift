@@ -99,6 +99,9 @@ class Home: UIViewController, NewsFeedView {
         if (segue.identifier == "to_yourSPV"){
             _ = segue.destination as! YourSpv
         }
+        if (segue.identifier == "to_Party"){
+            _ = segue.destination as! Party
+        }
         
     }
 }
@@ -276,7 +279,8 @@ extension Home: HomeView, UICollectionViewDelegate, UICollectionViewDataSource, 
         if indexPath.item == 0 {
             self.performSegue(withIdentifier: "to_yourSPV", sender: self)
         }
-      
+        if indexPath.item == 3 {
+            self.performSegue(withIdentifier: "to_Party", sender: self)
+        }
     }
-    
 }

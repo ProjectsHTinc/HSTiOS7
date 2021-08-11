@@ -22,8 +22,7 @@ class Awards: UIViewController,AwardsView,UITableViewDelegate,UITableViewDataSou
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//         self.callAPI (user_id: "1")
-        
+         self.callAPI (user_id: "1")
         // Do any additional setup after loading the view.
     }
     
@@ -38,7 +37,7 @@ class Awards: UIViewController,AwardsView,UITableViewDelegate,UITableViewDataSou
     func startLoading() {
            self.view.activityStartAnimating()
     }
-    
+
     func finishLoading() {
            self.view.activityStopAnimating()
     }
@@ -82,15 +81,6 @@ class Awards: UIViewController,AwardsView,UITableViewDelegate,UITableViewDataSou
        }
        
 }
-       
-      
-       
-
-    
-    
-    
-    
-    
     
     /*
     // MARK: - Navigation

@@ -10,38 +10,36 @@ import UIKit
 
 class NotableWorks: UIViewController,NotableWorksView,UITableViewDelegate,UITableViewDataSource {
     
-    
     @IBOutlet weak var tableView: UITableView!
     
     let presenter = NotableWorksPresenter(notableWorksServices: NotableWorksServices())
-       var resp = [NotableWorksData]()
+    var resp = [NotableWorksData]()
          
-       var Notable_TAM    = [String]()
-       var Notable_ENG  = [String]()
-       var NotableTitle_TAM    = [String]()
-       var NotableTitle_ENG  = [String]()
+    var Notable_TAM    = [String]()
+    var Notable_ENG  = [String]()
+    var NotableTitle_TAM    = [String]()
+    var NotableTitle_ENG  = [String]()
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-         self.callAPI (user_id: "1")
+        self.callAPI (user_id: "1")
     }
     
     func callAPI (user_id: String) {
                
-               presenter.attachView(view: self)
-               presenter.getnotableWorksValues(user_id: user_id)
+        presenter.attachView(view: self)
+        presenter.getnotableWorksValues(user_id: user_id)
 
     }
     
     func startLoading() {
-           self.view.activityStartAnimating()
+        self.view.activityStartAnimating()
     }
        
     func finishLoading() {
-           self.view.activityStopAnimating()
+        self.view.activityStopAnimating()
     }
        
     func setNotableWorksValue(notableWorkspResp: [NotableWorksData]) {
@@ -59,23 +57,22 @@ class NotableWorks: UIViewController,NotableWorksView,UITableViewDelegate,UITabl
                            self.NotableTitle_TAM.append(titleTamil!)
                            self.NotableTitle_ENG.append(titleEnglish!)
                            
-                    }
+       }
         
         self.tableView.reloadData()
+    }
+       
+    func setEmpty(errorMessage: String) {
+           AlertController.shared.showAlert(targetVc: self, title: "S.P.V", message: errorMessage, complition: {
+            })
+    }
+       
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return Notable_ENG.count
         
     }
        
-       func setEmpty(errorMessage: String) {
-           AlertController.shared.showAlert(targetVc: self, title: "S.P.V", message: errorMessage, complition: {
-                        })
-       }
-       
-       func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Notable_ENG.count
-        
-       }
-       
-       func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell (withIdentifier: "cell", for: indexPath) as! NotableWorksCell
 
         cell.title.text = NotableTitle_ENG[ indexPath.row]
@@ -83,18 +80,8 @@ class NotableWorks: UIViewController,NotableWorksView,UITableViewDelegate,UITabl
                
                return cell
        }
-       
-}
-       
-       
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+       return UITableView.automaticDimension
     }
-    */
-
-
+}
