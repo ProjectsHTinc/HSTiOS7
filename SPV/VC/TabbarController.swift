@@ -116,8 +116,6 @@ class TabbarController: UITabBarController, UITabBarControllerDelegate, UISearch
 //            vc.keyword = sender as! String
         }
     }
-    
-
 }
 
 class UINavigationBarGradientView: UIView {

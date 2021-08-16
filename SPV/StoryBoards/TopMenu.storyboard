@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SQ4-1O-1X3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SQ4-1O-1X3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -539,7 +539,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bGU-9o-M47" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="686.95652173913049" y="91.741071428571431"/>
+            <point key="canvasLocation" x="706" y="74"/>
         </scene>
         <!--Personal Life-->
         <scene sceneID="xSV-Kk-unf">
@@ -1264,9 +1264,8 @@
                                     <constraint firstAttribute="width" constant="50" id="nsK-0h-hWa"/>
                                 </constraints>
                             </imageView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I33-kR-EhH">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I33-kR-EhH">
                                 <rect key="frame" x="0.0" y="227" width="414" height="635"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <segue destination="OVX-4O-YaR" kind="embed" id="w3o-fj-QQL"/>
                                 </connections>
@@ -1314,21 +1313,25 @@
                             <constraint firstItem="Iz7-a9-eNx" firstAttribute="trailing" secondItem="ECG-in-xmi" secondAttribute="trailing" id="2X3-PS-ln3"/>
                             <constraint firstItem="Iz7-a9-eNx" firstAttribute="bottom" secondItem="ECG-in-xmi" secondAttribute="bottom" id="3CG-Cy-S5d"/>
                             <constraint firstItem="5sv-NP-Jx6" firstAttribute="top" secondItem="f81-ZF-MgW" secondAttribute="bottom" constant="18" id="3nb-d2-5JC"/>
+                            <constraint firstItem="I33-kR-EhH" firstAttribute="leading" secondItem="ECG-in-xmi" secondAttribute="leading" id="8Xf-MR-0gw"/>
                             <constraint firstItem="Iz7-a9-eNx" firstAttribute="top" secondItem="5sv-NP-Jx6" secondAttribute="bottom" constant="27" id="DOd-3U-ZuY"/>
                             <constraint firstItem="Iz7-a9-eNx" firstAttribute="trailing" secondItem="ECG-in-xmi" secondAttribute="trailing" id="E5P-K2-JwV"/>
                             <constraint firstItem="NVE-xd-eni" firstAttribute="bottom" secondItem="ECG-in-xmi" secondAttribute="bottom" id="FPN-Qy-D05"/>
                             <constraint firstItem="V0b-y4-Lxz" firstAttribute="leading" secondItem="w3W-Qc-Dc3" secondAttribute="trailing" constant="34" id="Iee-Uz-rue"/>
+                            <constraint firstItem="I33-kR-EhH" firstAttribute="top" secondItem="5sv-NP-Jx6" secondAttribute="bottom" constant="27" id="Ldy-AT-K2e"/>
                             <constraint firstItem="f81-ZF-MgW" firstAttribute="top" secondItem="ECG-in-xmi" secondAttribute="top" constant="37" id="MEb-lm-ND7"/>
                             <constraint firstItem="qCR-1M-Qzm" firstAttribute="leading" secondItem="coa-cx-9Cq" secondAttribute="trailing" constant="19" id="NVb-Lo-Hcw"/>
                             <constraint firstItem="f81-ZF-MgW" firstAttribute="centerX" secondItem="jM6-EP-PIh" secondAttribute="centerX" id="SKv-0k-VWF"/>
                             <constraint firstItem="Iz7-a9-eNx" firstAttribute="leading" secondItem="ECG-in-xmi" secondAttribute="leading" id="ThU-3Y-AqJ"/>
                             <constraint firstItem="Iz7-a9-eNx" firstAttribute="bottom" secondItem="ECG-in-xmi" secondAttribute="bottom" id="UJ7-Ag-Pee"/>
                             <constraint firstItem="qCR-1M-Qzm" firstAttribute="top" secondItem="ECG-in-xmi" secondAttribute="top" constant="47" id="UhB-c9-OE4"/>
+                            <constraint firstItem="I33-kR-EhH" firstAttribute="bottom" secondItem="ECG-in-xmi" secondAttribute="bottom" id="W42-aa-t1L"/>
                             <constraint firstItem="coa-cx-9Cq" firstAttribute="leading" secondItem="f81-ZF-MgW" secondAttribute="trailing" constant="15.5" id="XKA-4E-GMD"/>
                             <constraint firstItem="ECG-in-xmi" firstAttribute="trailing" secondItem="5sv-NP-Jx6" secondAttribute="trailing" constant="20" id="Z51-Ag-g7l"/>
                             <constraint firstItem="V0b-y4-Lxz" firstAttribute="top" secondItem="ECG-in-xmi" secondAttribute="top" constant="50" id="bCd-Mq-CA9"/>
                             <constraint firstItem="NVE-xd-eni" firstAttribute="top" secondItem="5sv-NP-Jx6" secondAttribute="bottom" constant="27" id="bri-ea-JmL"/>
                             <constraint firstItem="5sv-NP-Jx6" firstAttribute="leading" secondItem="ECG-in-xmi" secondAttribute="leading" constant="20" id="cgk-BU-FB8"/>
+                            <constraint firstItem="I33-kR-EhH" firstAttribute="trailing" secondItem="ECG-in-xmi" secondAttribute="trailing" id="dlh-VA-pXk"/>
                             <constraint firstItem="Iz7-a9-eNx" firstAttribute="leading" secondItem="ECG-in-xmi" secondAttribute="leading" id="fmc-Hi-fHY"/>
                             <constraint firstItem="w3W-Qc-Dc3" firstAttribute="top" secondItem="ECG-in-xmi" secondAttribute="top" constant="50" id="gGJ-cT-Aja"/>
                             <constraint firstItem="Iz7-a9-eNx" firstAttribute="top" secondItem="5sv-NP-Jx6" secondAttribute="bottom" constant="27" id="lL9-mf-Bqs"/>

@@ -102,7 +102,6 @@ class Home: UIViewController, NewsFeedView {
         if (segue.identifier == "to_Party"){
             _ = segue.destination as! Party
         }
-        
     }
 }
 
@@ -141,7 +140,6 @@ extension Home: HomeView, UICollectionViewDelegate, UICollectionViewDataSource, 
             self.newsfeed_idArr.append(newsFeed_id ?? "")
             self.nf_cover_imageArr.append(coverImage ?? "")
         }
-        
         self.tableView.reloadData()
         
     }
@@ -161,10 +159,12 @@ extension Home: HomeView, UICollectionViewDelegate, UICollectionViewDataSource, 
             cell.titleText.text = title_en[indexPath.row]
             cell.descp.text = descrip_en[indexPath.row]
          }
-         else{
+         else
+         {
             cell.titleText.text = title_ta[indexPath.row]
             cell.descp.text = descrip_ta[indexPath.row]
          }
+        
          let formatedDate = self.formattedDateFromString(dateString: dateArr[indexPath.row], withFormat: "MMM dd, YYYY")
          cell.date.text = formatedDate
          cell.imgView.sd_setImage(with: URL(string: Globals.homePageImage + nf_cover_imageArr[indexPath.row]), placeholderImage: UIImage(named: ""))
@@ -233,7 +233,6 @@ extension Home: HomeView, UICollectionViewDelegate, UICollectionViewDataSource, 
         }
     }
 
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
          return spvData.count
     }
